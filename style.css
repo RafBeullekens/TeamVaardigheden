@@ -7,6 +7,11 @@ h1 {
   color: var(--H1BLUE);
 }
 
+nav {
+  display: flex;
+  justify-content: center;
+}
+
 ul {
   display: flex;
   flex-direction: row;
@@ -15,4 +20,9 @@ ul {
 
 li {
   list-style: none;
+}
+
+div {
+  margin-left: 20rem;
+  margin-right: 20rem;
 }
