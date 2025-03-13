@@ -1,0 +1,8 @@
+:root {
+  --UCLLRED: #c7314b;
+  --H1BLUE: #1b3565;
+}
+
+h1 {
+  color: var(--H1BLUE);
+}
