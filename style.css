@@ -76,3 +76,9 @@ button {
 button:hover {
   cursor: pointer;
 }
+
+dt {
+  color: var(--H1BLUE);
+  font-size: 20px;
+  font-weight: bold;
+}
