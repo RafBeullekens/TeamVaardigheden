@@ -8,7 +8,7 @@
 body {
   margin: 0;
   background-color: var(--UCLLBODYCOLOR);
-  font-family: "Aleo", serif;
+  font-family: "Aleo", serif, bold;
 }
 
 h1 {
