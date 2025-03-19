@@ -113,4 +113,6 @@ dt {
   text-align: center;
   padding-top: 20%;
   background-image: url(images/portrait-latin-college-student-feeling-tired-overwhelmed-school-taking-nap.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
