@@ -82,3 +82,33 @@ dt {
   font-size: 20px;
   font-weight: bold;
 }
+
+.main-content-container {
+  margin: 1em;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 1fr;
+  background-color: var(--UCLLWHITE);
+  border-radius: 15px;
+  padding: 1em;
+}
+
+.main-content-text {
+  margin: 0;
+  text-align: start;
+  grid-area: 0/0/1/1;
+  background-color: var(--UCLLWHITE);
+  padding-right: 1em;
+}
+
+.main-content-image {
+  background-color: pink;
+  margin: 0;
+  margin-top: -1em;
+  margin-bottom: -1em;
+  margin-right: -1em;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  text-align: center;
+  padding-top: 20%;
+}
