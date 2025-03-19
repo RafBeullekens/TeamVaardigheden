@@ -8,16 +8,22 @@
 body {
   margin: 0;
   background-color: var(--UCLLBODYCOLOR);
+  font-family: "Aleo", serif;
 }
 
 h1 {
   color: var(--H1BLUE);
 }
-
+/* zorgt ervoor vdat de ul horizontaal gecentered wordt */
 nav {
   display: flex;
   justify-content: center;
   background-color: var(--UCLLRED);
+}
+/* zorgt ervoor dat de li's verticaal gecentered worden */
+nav ul {
+  display: flex;
+  align-items: center;
 }
 
 ul {
