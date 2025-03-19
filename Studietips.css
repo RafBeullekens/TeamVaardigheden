@@ -6,11 +6,28 @@
 }
 
 .timer-container {
-  display: inline-block; /*span heeft standaard display inline en is dus enkel toepasselijk op text*/
+  display: grid; /*span heeft standaard display inline en is dus enkel toepasselijk op text*/
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
   background-color: var(--UCLLWHITE);
   border-radius: 15px;
-  padding-left: 1rem;
-  padding-right: 1rem;
+  margin: 0;
+  padding: 1em;
+}
+.visuals {
+  margin: 0;
+  grid-area: 1/1/2/2;
+}
+.controls {
+  margin: 0;
+  grid-area: 1/2/2/3;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-top: 3em;
+  padding-bottom: 3em;
+  gap: 1em;
+  margin-right: 1em;
 }
 
 dt .timer-container {
