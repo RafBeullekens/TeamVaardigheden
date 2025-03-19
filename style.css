@@ -17,7 +17,7 @@ h1 {
 /* zorgt ervoor vdat de ul horizontaal gecentered wordt */
 nav {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   background-color: var(--UCLLRED);
 }
 /* zorgt ervoor dat de li's verticaal gecentered worden */
