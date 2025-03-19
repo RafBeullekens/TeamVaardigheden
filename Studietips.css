@@ -1,1 +1,14 @@
+:root {
+  --UCLLRED: #e30048;
+  --H1BLUE: #1b3565;
+  --UCLLWHITE: #ffffff;
+  --UCLLBODYCOLOR: #e9f3f8;
+}
 
+span {
+  display: inline-block; /*span heeft standaard display inline en is dus enkel toepasselijk op text*/
+  background-color: var(--UCLLWHITE);
+  border-radius: 15px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
