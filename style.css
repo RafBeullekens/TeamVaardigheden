@@ -3,12 +3,12 @@
   --H1BLUE: #1b3565;
   --UCLLWHITE: #ffffff;
   --UCLLBODYCOLOR: #e9f3f8;
+  font-family: "Aleo", sans-serif;
 }
 /* body margin:0 zorgt er voor dat de standaard margin van de browser gereset wordt*/
 body {
   margin: 0;
   background-color: var(--UCLLBODYCOLOR);
-  font-family: "Aleo", sans-serif;
   font-weight: 400;
 }
 
@@ -58,6 +58,8 @@ div {
 }
 
 button {
+  font-family: "Aleo", sans-serif;
+  color: var(--UCLLWHITE);
   border-radius: 5px;
   border: none;
   padding-top: 1em;

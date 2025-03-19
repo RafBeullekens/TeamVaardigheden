@@ -10,6 +10,7 @@ const sessionTitle = document.getElementById("session-title");
 const progressBar = document.getElementById("progress-bar");
 const startPauseBtn = document.getElementById("start-pause-btn");
 const resetBtn = document.getElementById("reset-btn");
+const timeStartPause = document.getElementById("start-pause-btn");
 
 function updateDisplay() {
   let minutes = Math.floor(timeLeft / 60);
@@ -59,3 +60,9 @@ resetBtn.addEventListener("click", resetTimer);
 
 // Initialize display
 updateDisplay();
+
+//Checks wether the timer started or is Paused
+
+timeStartPause.addEventListener("click", () => {
+  timeStartPause.classList.toggle("Pause");
+});

@@ -13,6 +13,7 @@
   border-radius: 15px;
   margin: 0;
   padding: 1em;
+  margin-bottom: 1em;
 }
 .visuals {
   margin: 0;
@@ -30,10 +31,16 @@
   margin-right: 1em;
 }
 
-dt .timer-container {
-  margin-bottom: 1em;
-}
-
 dd {
   margin-bottom: 1em;
+}
+#start-pause-btn {
+  background-color: green;
+}
+#start-pause-btn.Pause {
+  background-color: grey;
+}
+
+#reset-btn {
+  background-color: red;
 }
