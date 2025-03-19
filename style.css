@@ -1,6 +1,13 @@
 :root {
-  --UCLLRED: #c7314b;
+  --UCLLRED: #e30048;
   --H1BLUE: #1b3565;
+  --UCLLWHITE: #ffffff;
+  --UCLLBODYCOLOR: #e9f3f7;
+}
+/* body margin:0 zorgt er voor dat de standaard margin van de browser gereset wordt*/
+body {
+  margin: 0;
+  background-color: var(--UCLLBODYCOLOR);
 }
 
 h1 {
@@ -10,6 +17,7 @@ h1 {
 nav {
   display: flex;
   justify-content: center;
+  background-color: var(--UCLLRED);
 }
 
 ul {
