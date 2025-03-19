@@ -2,13 +2,14 @@
   --UCLLRED: #e30048;
   --H1BLUE: #1b3565;
   --UCLLWHITE: #ffffff;
-  --UCLLBODYCOLOR: #e9f3f7;
+  --UCLLBODYCOLOR: #e9f3f8;
 }
 /* body margin:0 zorgt er voor dat de standaard margin van de browser gereset wordt*/
 body {
   margin: 0;
   background-color: var(--UCLLBODYCOLOR);
-  font-family: "Aleo", serif, bold;
+  font-family: "Aleo", sans-serif;
+  font-weight: 400;
 }
 
 h1 {
@@ -19,6 +20,7 @@ nav {
   display: flex;
   justify-content: flex-start;
   background-color: var(--UCLLRED);
+  font-size: 20px;
 }
 /* zorgt ervoor dat de li's verticaal gecentered worden */
 nav ul {
@@ -39,6 +41,10 @@ li {
 li a {
   color: var(--UCLLWHITE);
   text-decoration: none;
+}
+/* zorgt ervoor dat het studentbuddy logo naast het ucll logo staat*/
+#student-buddy-logo {
+  margin-left: -2rem;
 }
 
 div {
