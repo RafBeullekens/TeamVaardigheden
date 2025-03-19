@@ -8,7 +8,7 @@
 .timer-container {
   display: grid; /*span heeft standaard display inline en is dus enkel toepasselijk op text*/
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
+  grid-template-rows: repeat(2, 1fr);
   background-color: var(--UCLLWHITE);
   border-radius: 15px;
   margin: 0;
@@ -29,6 +29,12 @@
   padding-bottom: 3em;
   gap: 1em;
   margin-right: 1em;
+}
+
+#progress-bar {
+  grid-area: 2/1/3/3;
+  width: 100%;
+  margin-bottom: 0;
 }
 
 dd {

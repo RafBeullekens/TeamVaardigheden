@@ -4,6 +4,7 @@ let timeLeft = workTime;
 let isWorkSession = true;
 let isRunning = false;
 let timer;
+let firstTimeClickedStart = true;
 
 const timeDisplay = document.getElementById("time-display");
 const sessionTitle = document.getElementById("session-title");
@@ -11,6 +12,7 @@ const progressBar = document.getElementById("progress-bar");
 const startPauseBtn = document.getElementById("start-pause-btn");
 const resetBtn = document.getElementById("reset-btn");
 const timeStartPause = document.getElementById("start-pause-btn");
+const timeReset = document.getElementById("reset-btn");
 
 function updateDisplay() {
   let minutes = Math.floor(timeLeft / 60);
@@ -64,5 +66,27 @@ updateDisplay();
 //Checks wether the timer started or is Paused
 
 timeStartPause.addEventListener("click", () => {
-  timeStartPause.classList.toggle("Pause");
+  if (firstTimeClickedStart) {
+    firstTimeClickedStart = false;
+    timeStartPause.classList.toggle("Pause");
+  } else {
+    timeStartPause.classList.toggle("Pause");
+    if (timeStartPause.classList.contains("Pause")) {
+      console.log("pause true");
+      timeStartPause.textContent = "Pause";
+    } else {
+      console.log("pause false");
+      timeStartPause.textContent = "Resume";
+    }
+  }
+});
+
+//resets the counter so the button shows start again
+
+timeReset.addEventListener("click", () => {
+  if (timeStartPause.classList.contains("Pause")) {
+    timeStartPause.classList.toggle("Pause");
+  }
+  timeStartPause.textContent = "Start";
+  firstTimeClickedStart = true;
 });
