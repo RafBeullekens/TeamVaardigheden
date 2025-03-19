@@ -8,7 +8,7 @@
 .timer-container {
   display: grid; /*span heeft standaard display inline en is dus enkel toepasselijk op text*/
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat 1fr 0.3fr;
   background-color: var(--UCLLWHITE);
   border-radius: 15px;
   margin: 0;

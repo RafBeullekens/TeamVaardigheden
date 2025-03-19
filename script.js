@@ -81,7 +81,7 @@ timeStartPause.addEventListener("click", () => {
   }
 });
 
-//resets the counter so the button shows start again
+//resets the counter so the button shows start again when you reset
 
 timeReset.addEventListener("click", () => {
   if (timeStartPause.classList.contains("Pause")) {
