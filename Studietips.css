@@ -12,3 +12,11 @@ span {
   padding-left: 1rem;
   padding-right: 1rem;
 }
+
+dt span {
+  margin-bottom: 1em;
+}
+
+dd {
+  margin-bottom: 1em;
+}
