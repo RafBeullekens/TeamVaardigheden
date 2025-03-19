@@ -4,11 +4,11 @@
   --UCLLWHITE: #ffffff;
   --UCLLBODYCOLOR: #e9f3f7;
 }
+
 /* body margin:0 zorgt er voor dat de standaard margin van de browser gereset wordt*/
 body {
   margin: 0;
   background-color: var(--UCLLBODYCOLOR);
-  font-family: "Aleo", serif, bold;
 }
 
 h1 {
