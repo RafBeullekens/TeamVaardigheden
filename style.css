@@ -47,6 +47,10 @@ li a {
 li a:hover {
   text-decoration: underline;
 }
+
+.UCLL-Logo:hover {
+  opacity: 80%;
+}
 /* zorgt ervoor dat het studentbuddy logo naast het ucll logo staat*/
 #student-buddy-logo {
   margin-left: -2rem;
@@ -67,4 +71,8 @@ button {
   padding-left: 1rem;
   padding-right: 1rem;
   width: 7em;
+}
+
+button:hover {
+  cursor: pointer;
 }
