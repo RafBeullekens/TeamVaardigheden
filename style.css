@@ -103,6 +103,7 @@ dt {
 
 .main-content-image {
   background-color: pink;
+  color: var(--UCLLWHITE);
   margin: 0;
   margin-top: -1em;
   margin-bottom: -1em;
@@ -111,4 +112,5 @@ dt {
   border-bottom-right-radius: 15px;
   text-align: center;
   padding-top: 20%;
+  background-image: url(images/portrait-latin-college-student-feeling-tired-overwhelmed-school-taking-nap.jpg);
 }
