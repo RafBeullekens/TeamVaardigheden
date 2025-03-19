@@ -36,7 +36,8 @@ li {
   list-style: none;
 }
 
-a {
+li a {
+  color: var(--UCLLWHITE);
   text-decoration: none;
 }
 
