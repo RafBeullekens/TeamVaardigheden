@@ -1,4 +1,5 @@
 const apiUrl = 'https://meme-api.com/gimme';
+let memeCoins = 10;
 
 const fetchRandomMeme = async () => {
     try {
@@ -7,11 +8,11 @@ const fetchRandomMeme = async () => {
             throw new Error(`http error with status: ${response.status}`);
         }
         const data = await response.json();
-        return data.url
+        return data.url;
     } catch (error) {
         console.error("error fetching meme:", error);
     }
-};
+}
 
 const renderRandomMeme = async () => {
     const url = await fetchRandomMeme();
@@ -21,13 +22,30 @@ const renderRandomMeme = async () => {
     main.appendChild(img);
 }
 
+const displayMemeCoins = () => {
+    const p = document.getElementById('meme-coins');
+    p.innerHTML = `Meme Coins: ${memeCoins}`;
+}
+
 const memeButton = document.getElementById('meme-button');
 memeButton.addEventListener('click', () => {
-    console.log("button clicked")
+    const main = document.querySelector('main');
     const img = document.querySelector('main img');
-    if (img) {
-        const main = document.querySelector('main');
-        main.removeChild(img);
+    const oldP = document.getElementById('no-meme-coins');
+    
+    if (img) {main.removeChild(img);} 
+    if (oldP) {main.removeChild(oldP);}
+    
+    if (memeCoins > 0) {
+        renderRandomMeme();
+        memeCoins -= 1;
+        displayMemeCoins();
+    } else {
+        const newP = document.createElement('p');
+        newP.innerHTML = "Je hebt geen Meme Coins meer :( !! Wacht tot de timer is afgelopen.";
+        newP.id = "no-meme-coins";
+        main.appendChild(newP);
     }
-    renderRandomMeme();
 })
+
+displayMemeCoins();
