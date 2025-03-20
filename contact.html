@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="Studietips.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="ontspanning.css">
-    <title>Document</title>
-    <script src="ontspanning.js" type="module" defer></script>
-  </head>
-  <body>
+    <title>Contact</title>
+</head>
+<body>
     <header>
       <nav>
         <ul>
@@ -33,12 +32,18 @@
         </ul>
       </nav>
     </header>
-
     <main>
-      <p>Meme Coins</p>
-      <button id="meme-button">Generate Meme</button>
-    </main>
+      <form class="contact-form" action="" method="post">
+        <label for="naam">Naam:</label>
+        <input type="text" id="naam" name="naam" required><br><br>
 
+        <label for="bericht">Bericht:</label><br>
+        <textarea rows="4" cols="50" required></textarea><br><br>
+
+        <button type="submit">Verzenden</button>
+    </form>
+    </main>
     <footer>footer</footer>
-  </body>
+    <script src="script.js"></script>
+</body>
 </html>
