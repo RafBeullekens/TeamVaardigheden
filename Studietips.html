@@ -19,9 +19,9 @@
       <nav>
         <ul>
           <li class="UCLL-Logo">
-            <a href="index.html"
-              ><img src="images/logo.svg" alt="UCLL-Logo"
-            /></a>
+            <a href="index.html">
+              <img src="images/logo.svg" alt="UCLL-Logo" />
+            </a>
           </li>
           <li id="student-buddy-logo">
             <img src="images/studentbuddy.svg" alt="StudentBuddyLogo" />
@@ -33,61 +33,120 @@
       </nav>
     </header>
     <main>
-      <div>
-        <h1>Studietips</h1>
-        <p>
-          Hieronder onze tips om studeren efficiënt, houdbaar en zo aangenaam
-          mogelijk te houden!
-        </p>
-        <dl>
-          <dt>Test jezelf</dt>
-          <dd>
-            Vermijd passief lezen van teksten, maar ga op zoek naar actieve
-            manieren om jezelf te testen, bijvoorbeeld laten ondervragen door
-            iemand.
-          </dd>
-          <dt>Herhaling werkt</dt>
-          <dd>
-            Probeer niet alle leerstof op 1 moment te studeren. Je haalt de
-            beste resultaten door deze momenten te spreiden, bijvoorbeeld
-            kortere sessies 1 keer per week.z
-          </dd>
-          <dt>Focus op begrijpen, niet memoriseren</dt>
-          <dd>
-            Zorg ervoor dat je de 'waarom' begrijpt, en niet zomaar kan opsommen
-            wat er geschreven stond.
-          </dd>
-          <dt>Gebruik de Pomodoro techniek</dt>
-          <dd>
-            Werk in kortere intervallen van 20 tot 50 minuten, en naam dan een
-            vastgelegde pauze van 5 tot 10 minuten. Hou hier niet te hard aan
-            vast en voorzie langere pauzes op langere studeersessies.
-          </dd>
-
-          <div class="timer-container">
-            <div class="visuals">
-              <h1 id="session-title">Work Time</h1>
-              <p id="time-display">25:00</p>
+      <div class="study-tips-container">
+        <section class="study-tips">
+          <h1>Studietips</h1>
+          <p>
+            Hieronder onze tips om studeren efficiënt, houdbaar en zo aangenaam
+            mogelijk te houden!
+          </p>
+          <!-- Tip 1: Test jezelf -->
+          <article class="study-tip">
+            <div class="tip-image">
+              <img src="images/test-yourself.jpg" alt="Test jezelf" />
             </div>
-            <div class="controls">
-              <button id="start-pause-btn">Start</button>
-              <button id="reset-btn">Reset</button>
+            <div class="tip-text">
+              <h2>Test jezelf</h2>
+              <p>
+                Vermijd passief lezen van teksten, maar ga op zoek naar actieve
+                manieren om jezelf te testen, bijvoorbeeld laten ondervragen
+                door iemand.
+              </p>
             </div>
-            <progress id="progress-bar" value="100" max="100"></progress>
-          </div>
-
-          <dt>Kies je omgeving zorgvuldig</dt>
-          <dd>
-            Zoek uit wat voor jou het beste werkt, stilte, muziek, het
-            achtergrondgeluid van een koffiebar, etc.
-          </dd>
-          <dt>Slaap, voeding en beweging doen wonderen</dt>
-          <dd>
-            Voldoende slapen, gezond eten en regelmatige beweging zijn de basis
-            voor jouw concentratievermogen. Plan dus een wandeling in op een
-            drukke dag, en merk zelf het verschil!
-          </dd>
-        </dl>
+          </article>
+          <!-- Tip 2: Herhaling werkt -->
+          <article class="study-tip">
+            <div class="tip-image">
+              <img src="images/repetition.jpg" alt="Herhaling werkt" />
+            </div>
+            <div class="tip-text">
+              <h2>Herhaling werkt</h2>
+              <p>
+                Probeer niet alle leerstof op één moment te studeren. Je haalt
+                de beste resultaten door deze momenten te spreiden, bijvoorbeeld
+                kortere sessies 1 keer per week.
+              </p>
+            </div>
+          </article>
+          <!-- Tip 3: Focus op begrijpen, niet memoriseren -->
+          <article class="study-tip">
+            <div class="tip-image">
+              <img
+                src="images/focus.jpg"
+                alt="Focus op begrijpen, niet memoriseren"
+              />
+            </div>
+            <div class="tip-text">
+              <h2>Focus op begrijpen, niet memoriseren</h2>
+              <p>
+                Zorg ervoor dat je de 'waarom' begrijpt, en niet zomaar kan
+                opsommen wat er geschreven stond.
+              </p>
+            </div>
+          </article>
+          <!-- Tip 4: Gebruik de Pomodoro techniek -->
+          <article class="study-tip">
+            <div class="tip-image">
+              <img
+                src="images/pomodoro.jpg"
+                alt="Gebruik de Pomodoro techniek"
+              />
+            </div>
+            <div class="tip-text">
+              <h2>Gebruik de Pomodoro techniek</h2>
+              <p>
+                Werk in kortere intervallen van 20 tot 50 minuten, en neem dan
+                een vaste pauze van 5 tot 10 minuten. Hou hier niet te hard aan
+                vast en voorzie langere pauzes op langere studeersessies.
+              </p>
+              <!-- Embedded timer for Pomodoro -->
+              <div class="timer-container">
+                <div class="visuals">
+                  <h1 id="session-title">Work Time</h1>
+                  <p id="time-display">25:00</p>
+                </div>
+                <div class="controls">
+                  <button id="start-pause-btn">Start</button>
+                  <button id="reset-btn">Reset</button>
+                </div>
+                <progress id="progress-bar" value="100" max="100"></progress>
+              </div>
+            </div>
+          </article>
+          <!-- Tip 5: Kies je omgeving zorgvuldig -->
+          <article class="study-tip">
+            <div class="tip-image">
+              <img
+                src="images/choose-environment.jpg"
+                alt="Kies je omgeving zorgvuldig"
+              />
+            </div>
+            <div class="tip-text">
+              <h2>Kies je omgeving zorgvuldig</h2>
+              <p>
+                Zoek uit wat voor jou het beste werkt: stilte, muziek, of het
+                achtergrondgeluid van een koffiebar.
+              </p>
+            </div>
+          </article>
+          <!-- Tip 6: Slaap, voeding en beweging doen wonderen -->
+          <article class="study-tip">
+            <div class="tip-image">
+              <img
+                src="images/healthy-lifestyle.jpg"
+                alt="Slaap, voeding en beweging doen wonderen"
+              />
+            </div>
+            <div class="tip-text">
+              <h2>Slaap, voeding en beweging doen wonderen</h2>
+              <p>
+                Voldoende slapen, gezond eten en regelmatige beweging zijn de
+                basis voor jouw concentratievermogen. Plan dus een wandeling in
+                op een drukke dag, en merk zelf het verschil!
+              </p>
+            </div>
+          </article>
+        </section>
       </div>
     </main>
     <footer>footer</footer>
