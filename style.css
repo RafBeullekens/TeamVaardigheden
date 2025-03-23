@@ -23,6 +23,17 @@ nav {
   font-size: 20px;
   width: 100%;
 }
+
+footer {
+  display: flex;
+  left: 0;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  background-color: var(--UCLLRED);
+  color: var(--UCLLWHITE);
+  font-size: 20px;
+}
 /* zorgt ervoor dat de li's verticaal gecentered worden */
 nav ul {
   display: flex;
@@ -169,4 +180,27 @@ dt {
     margin-left: 2rem;
     margin-right: 2rem;
   }
+}
+form {
+  width: 400px;
+  height: 400px;
+  padding: 20px;
+  border-radius: 8px;
+  background-color: var(--UCLLRED);
+  box-shadow: 0 4px 8px rgb(122, 122, 122);
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  width: 80%;
+  padding: 8px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
