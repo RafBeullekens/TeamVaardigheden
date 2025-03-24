@@ -118,8 +118,8 @@ dd {
 }
 
 article:hover img {
-  transition: 1000ms;
-  transform: scale(1.2);
+  transition: 2000ms;
+  transform: scale(1.1);
 }
 
 /* Responsive adjustments for smaller screens */
