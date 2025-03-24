@@ -75,7 +75,6 @@ dd {
   background-color: var(--UCLLWHITE);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.158);
   overflow: hidden;
-  transition: transform 0.1s ease;
 }
 
 /* Image container: allow more space for images */
@@ -117,9 +116,12 @@ dd {
   margin-bottom: 0;
 }
 
+article img {
+  transition: 1000ms ease-in-out;
+}
+
 article:hover img {
-  transition: 2000ms;
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 
 /* Responsive adjustments for smaller screens */
