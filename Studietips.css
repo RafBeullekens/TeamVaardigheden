@@ -5,6 +5,14 @@
   --UCLLBODYCOLOR: #e9f3f8;
 }
 
+#title {
+  text-align: center;
+}
+
+#title-description {
+  text-align: center;
+}
+
 .timer-container {
   display: grid; /*span heeft standaard display inline en is dus enkel toepasselijk op text*/
   grid-template-columns: 1fr 1fr;
