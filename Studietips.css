@@ -59,7 +59,6 @@ dd {
 /* Container to override or avoid the universal div margin from style.css */
 .study-tips-container {
   margin: 0 auto !important; /* Center it horizontally */
-  padding: 1em;
 }
 
 /* The main section holding all tips */
