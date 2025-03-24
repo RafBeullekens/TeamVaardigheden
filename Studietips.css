@@ -79,10 +79,6 @@ dd {
   transition: transform 0.3s ease;
 }
 
-.study-tip:hover {
-  transform: translateY(-5px);
-}
-
 /* Image container: allow more space for images */
 .tip-image {
   flex: 0 0 50%; /* The image can take up to X% of the row */
@@ -120,6 +116,11 @@ dd {
 .tip-text p {
   line-height: 1.6;
   margin-bottom: 0;
+}
+
+article:hover img {
+  transition: 1000ms;
+  transform: scale(1.2);
 }
 
 /* Responsive adjustments for smaller screens */
