@@ -23,18 +23,43 @@ nav {
   font-size: 20px;
   width: 100%;
 }
-
-footer {
-  display: flex;
+/*Css code voor de footer */
+.footer {
+  position: fixed;
   left: 0;
   bottom: 0;
-  position: fixed;
   width: 100%;
   background-color: var(--UCLLRED);
   color: var(--UCLLWHITE);
-  font-size: 20px;
-
+  text-align: center;
 }
+
+.footer-menu {
+  margin: 15px 0;
+}
+.footer-menu a {
+  color: var(--UCLLWHITE);
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 16px;
+}
+.footer-menu a:hover {
+  text-decoration: underline;
+}
+
+.fa {
+  padding-top: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;;
+  border-radius: 50%;
+  color: var(--UCLLWHITE);
+}
+.fa:hover {
+  opacity: 0.7;
+}
+
 /* zorgt ervoor dat de li's verticaal gecentered worden */
 nav ul {
   display: flex;
