@@ -10,7 +10,6 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat 1fr 0.3fr;
   background-color: var(--UCLLWHITE);
-  border-radius: 15px;
   margin: 0;
   padding: 1em;
   margin-bottom: 1em;
@@ -31,6 +30,12 @@
   margin-right: 1em;
 }
 
+.study-tips-container,
+.study-tips-container div {
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
 #progress-bar {
   grid-area: 2/1/3/3;
   width: 100%;
@@ -49,4 +54,82 @@ dd {
 
 #reset-btn {
   background-color: red;
+}
+
+/* Container to override or avoid the universal div margin from style.css */
+.study-tips-container {
+  margin: 0 auto !important; /* Center it horizontally */
+}
+
+/* The main section holding all tips */
+.study-tips {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.study-tip {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  background-color: var(--UCLLWHITE);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.158);
+  overflow: hidden;
+  transition: transform 0.1s ease;
+}
+
+/* Image container: allow more space for images */
+.tip-image {
+  flex: 1 1 50%; /* The image can take up to X% of the row */
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Make images larger and maintain aspect ratio */
+.tip-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* Text container */
+.tip-text {
+  flex: 1 1 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* centers content vertically */
+  align-items: center; /* centers content horizontally */
+  text-align: center; /* centers text inside the container */
+  font-size: 1em;
+}
+
+.tip-text h2 {
+  margin-top: 0;
+  color: var(--H1BLUE);
+  margin-bottom: 2em;
+}
+
+.tip-text p {
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+article:hover img {
+  transition: 2000ms;
+  transform: scale(1.1);
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+  .study-tip {
+    flex-direction: column;
+  }
+  .tip-image,
+  .tip-text {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
 }

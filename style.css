@@ -66,6 +66,45 @@ nav ul {
   align-items: center;
 }
 
+.hero-banner {
+  background: url("images/index-banner.jpg") no-repeat center center/cover;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--UCLLWHITE);
+  text-align: center;
+  position: relative;
+}
+
+button {
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+button:hover {
+  transform: scale(1.05);
+}
+
+.hero-banner::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+.banner-content {
+  position: relative;
+  z-index: 1;
+}
+
+.main-content-image {
+  transition: transform 0.3s ease;
+}
+.main-content-image:hover {
+  transform: scale(1.05);
+}
+
 ul {
   display: flex;
   flex-direction: row;
@@ -154,6 +193,20 @@ dt {
   background-repeat: no-repeat;
 }
 
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .main-content-container {
+    grid-template-columns: 1fr;
+  }
+  /* Adjust margins and padding for smaller screens */
+  div {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+}
 form {
   width: 400px;
   height: 400px;
@@ -163,13 +216,14 @@ form {
   box-shadow: 0 4px 8px rgb(122, 122, 122);
 }
 
-  label {
+label {
   display: block;
   margin-bottom: 8px;
   font-weight: bold;
 }
 
-  input, textarea {
+input,
+textarea {
   width: 80%;
   padding: 8px;
   margin-bottom: 12px;
