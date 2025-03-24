@@ -10,7 +10,6 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat 1fr 0.3fr;
   background-color: var(--UCLLWHITE);
-  border-radius: 15px;
   margin: 0;
   padding: 1em;
   margin-bottom: 1em;
@@ -57,57 +56,6 @@ dd {
   background-color: red;
 }
 
-/* Container for the whole study tips section */
-.study-tips {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 1em;
-}
-
-/* Each study tip is displayed as a card */
-.study-tip {
-  display: flex;
-  align-items: flex-start;
-  background-color: var(--UCLLWHITE);
-  border-radius: 10px;
-  margin-bottom: 1.5em;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.study-tip:hover {
-  transform: translateY(-5px);
-}
-
-/* Image container for each tip */
-.tip-image {
-  flex: 0 0 200px;
-  height: 100%;
-  overflow: hidden;
-}
-
-.tip-image img {
-  width: 100%;
-  height: auto;
-  display: block;
-}
-
-/* Text container for the tip */
-.tip-text {
-  padding: 1em;
-}
-
-.tip-text h2 {
-  margin-top: 0;
-  color: var(--H1BLUE);
-}
-
-.tip-text p {
-  margin-bottom: 0;
-  line-height: 1.6;
-}
-
 /* Container to override or avoid the universal div margin from style.css */
 .study-tips-container {
   margin: 0 auto !important; /* Center it horizontally */
@@ -118,6 +66,7 @@ dd {
 .study-tips {
   display: flex;
   flex-direction: column;
+  margin: 0 auto;
 }
 
 /* Each tip displayed as a card */
@@ -126,7 +75,6 @@ dd {
   flex-direction: row;
   align-items: stretch;
   background-color: var(--UCLLWHITE);
-  border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.158);
   overflow: hidden; /* ensures corners remain rounded */
   transition: transform 0.3s ease;
@@ -138,7 +86,7 @@ dd {
 
 /* Image container: allow more space for images */
 .tip-image {
-  flex: 1 1 50%; /* The image can take up to X% of the row */
+  flex: 0 0 50%; /* The image can take up to X% of the row */
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -155,8 +103,7 @@ dd {
 
 /* Text container */
 .tip-text {
-  flex: 1 1 50%;
-  padding: 1em 2em;
+  flex: 0 0 50%;
   display: flex;
   flex-direction: column;
   justify-content: center; /* centers content vertically */
