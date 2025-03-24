@@ -68,24 +68,23 @@ dd {
   margin: 0 auto;
 }
 
-/* Each tip displayed as a card */
 .study-tip {
   display: flex;
   flex-direction: row;
   align-items: stretch;
   background-color: var(--UCLLWHITE);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.158);
-  overflow: hidden; /* ensures corners remain rounded */
-  transition: transform 0.3s ease;
+  overflow: hidden;
+  transition: transform 0.1s ease;
 }
 
 .study-tip:hover {
-  transform: translateY(-5px);
+  transform: scale(1.02);
 }
 
 /* Image container: allow more space for images */
 .tip-image {
-  flex: 0 0 50%; /* The image can take up to X% of the row */
+  flex: 1 1 50%; /* The image can take up to X% of the row */
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -102,7 +101,7 @@ dd {
 
 /* Text container */
 .tip-text {
-  flex: 0 0 50%;
+  flex: 1 1 50%;
   display: flex;
   flex-direction: column;
   justify-content: center; /* centers content vertically */
