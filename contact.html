@@ -33,15 +33,17 @@
         </ul>
       </nav>
     </header>
-    <main>
-      <form class="contact-form" action="" method="post">
-        <label for="naam">Naam:</label>
-        <input type="text" id="naam" name="naam" required /><br /><br />
-
-        <label for="bericht">Bericht:</label><br />
-        <textarea rows="4" cols="50" required></textarea><br /><br />
-
-        <button type="submit">Verzenden</button>
+    <main class="contact-main">
+      <form class="contact-form">
+        <h2>Contacteer ons</h2>
+        <input type="text" name="naam" placeholder="Uw naam" required />
+        <textarea
+          name="bericht"
+          placeholder="Uw bericht"
+          rows="5"
+          required
+        ></textarea>
+        <button type="submit">Verstuur</button>
       </form>
     </main>
     <footer>footer</footer>
