@@ -1,0 +1,49 @@
+:root {
+  --UCLLRED: #e30048;
+  --H1BLUE: #1b3565;
+  --UCLLWHITE: #ffffff;
+  --UCLLBODYCOLOR: #e9f3f8;
+}
+
+.contact-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--UCLLWHITE);
+  font-family: Arial, sans-serif;
+}
+.contact-form {
+  background: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+  width: 500px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.contact-form input,
+.contact-form textarea {
+  width: calc(100% - 20px);
+  padding: 12px;
+  margin: 12px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  text-align: left;
+  font-size: 16px;
+}
+.contact-form button {
+  background: var(--UCLLRED);
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 16px;
+}
+.contact-form button:hover {
+  background: #cd0041;
+}
