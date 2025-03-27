@@ -15,6 +15,31 @@ body {
   flex-direction: column;
 }
 
+body.dark-mode {
+  background-color: #182c4c;
+  color: #f2f0ef;
+
+  nav {
+    background-color: #380a1c;
+  }
+  footer {
+    background-color: #380a1c;
+  }
+
+  main div {
+    background-color: #b0b0b0;
+  }
+  h1 {
+    color: #f2f0ef;
+  }
+}
+
+.dark-mode-button {
+  align-self: flex-end;
+  background-color: #182c4c;
+  color: #f2f0ef;
+}
+
 h1 {
   color: var(--H1BLUE);
 }
