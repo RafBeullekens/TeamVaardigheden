@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="ontspanning.css" />
     <script src="ontspanning.js" defer></script>
+    <script src="darkmode.js" defer></script>
     <title>Ontspanning - Ga naar buiten!</title>
   </head>
   <body>
@@ -30,16 +31,19 @@
           <li><a href="ontspanning.html">Ontspanning</a></li>
           <li><a href="pomodoro.html">Pomodoro</a></li>
           <li><a href="contact.html">Contact</a></li>
+           <li><button class="dark-mode-button"> &#9790</button></li>
         </ul>
       </nav>
     </header>
 
     <main>
+      
       <p id="weather">Weer: Laden...</p>
       <button onclick="randomActivity()">Geef me een activiteit!</button>
       <p id="activity">Klik op de knop voor een idee.</p>
       <h3>Motivatie van de dag:</h3>
       <p id="quote">Laden...</p>
+      
     </main>
 
     <footer class="footer">
