@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,15 +9,10 @@
       type="image/x-icon"
     />
     <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
     <link rel="stylesheet" href="ontspanning.css" />
-    <title>Ontspanning</title>
-    <script src="ontspanning.js" type="module" defer></script>
+    <script src="ontspanning.js" defer></script>
+    <script src="darkmode.js" defer></script>
+    <title>Ontspanning - Ga naar buiten!</title>
   </head>
   <body>
     <header>
@@ -36,15 +31,48 @@
           <li><a href="ontspanning.html">Ontspanning</a></li>
           <li><a href="pomodoro.html">Pomodoro</a></li>
           <li><a href="contact.html">Contact</a></li>
+           <li><button class="dark-mode-button"> &#9790</button></li>
         </ul>
       </nav>
     </header>
 
     <main>
-      <p id="meme-coins">Meme Coins: -</p>
-      <button id="meme-button">Generate Meme</button>
+      <div class="sidebar">
+        <button>Activiteiten</button>
+        <button>Meditatie</button>
+        <button>Iets</button>
+      </div>
+      <div class="content">
+        <section id="activiteiten">
+          <p id="weather">Weer: Laden...</p>
+          <button onclick="randomActivity()">Geef me een activiteit!</button>
+          <p id="activity">Klik op de knop voor een idee.</p>
+          <h3>Motivatie van de dag:</h3>
+          <p id="quote">Laden...</p>
+        </section>
+        <section id="meditatie">
+          <h2>Guided Meditation Videos</h2>
+          <button id="random-video-button">kijk een meditatie video</button>
+          <div id="video-container"></div>
+        </section>
+        <section id="Iets">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reprehenderit doloremque asperiores quaerat, saepe atque tempora repellendus autem, modi necessitatibus at facilis sapiente accusamus reiciendis excepturi libero, ut aperiam unde beatae.</section>
+      </div>
     </main>
-
-    <footer>footer</footer>
+    <footer class="footer">
+      <div class="footer-social">
+        <a href="https://www.instagram.com/ucleuvenlimburg/" class="fa fa-instagram"></a>
+        <a href="https://www.facebook.com/hogeschoolUCLL/?locale=nl_NL" class="fa fa-facebook"></a>
+        <a href="https://www.linkedin.com/school/hogeschoolucll/posts/?feedView=all" class="fa fa-linkedin"></a>
+      </div>
+      <div class="footer-menu">
+          <a href="index.html">Home</a>
+          <a href="Studietips.html">Studietips</a>
+          <a href="ontspanning.html">Ontspanning</a>
+          <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-copyright">
+          Copyright &copy;2025; StudentBuddy
+      </div>
+  </footer>
   </body>
 </html>
