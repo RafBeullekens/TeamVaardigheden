@@ -15,6 +15,31 @@ body {
   flex-direction: column;
 }
 
+body.dark-mode {
+  background-color: #182c4c;
+  color: #f2f0ef;
+
+  nav {
+    background-color: #380a1c;
+  }
+  footer {
+    background-color: #380a1c;
+  }
+
+  main div {
+    background-color: #b0b0b0;
+  }
+  h1 {
+    color: #f2f0ef;
+  }
+}
+
+.dark-mode-button {
+  align-self: flex-end;
+  background-color: #182c4c;
+  color: #f2f0ef;
+}
+
 h1 {
   color: var(--H1BLUE);
 }
@@ -73,7 +98,7 @@ nav ul {
 
 .hero-banner {
   background: url("images/index-banner.jpg") no-repeat center center/cover;
-  height: 50vh;
+  height: 65vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -100,7 +125,15 @@ button:hover {
 }
 .banner-content {
   position: relative;
+  align-content: center;
+  height: 100%;
+  width: 100%;
   z-index: 1;
+}
+
+#banner-logo {
+  width: 80%;
+  color: var(--UCLLWHITE);
 }
 
 .main-content-image {
@@ -165,9 +198,9 @@ dt {
 }
 
 .main-content-container {
-  margin: 1em;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(1, 1fr);
   grid-template-rows: 1fr;
   background-color: var(--UCLLWHITE);
   border-radius: 15px;
@@ -175,8 +208,8 @@ dt {
 }
 
 .main-content-text {
-  margin: 0;
-  text-align: start;
+  margin: 0 auto;
+  text-align: center;
   grid-area: 0/0/1/1;
   background-color: var(--UCLLWHITE);
   padding-right: 1em;
