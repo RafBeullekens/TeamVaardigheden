@@ -6,6 +6,16 @@ body {
   padding: 0;
 }
 
+body.dark-mode {
+  #activiteiten {
+    background-color: #b0b0b0;
+  }
+
+  #meditation {
+    background-color: #b0b0b0;
+  }
+}
+
 section {
   display: flex;
   flex-direction: column;
