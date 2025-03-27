@@ -56,10 +56,29 @@
 
 // displayMemeCoins();
 
-// let activiteiten = document.getElementById("activiteiten");
+document.addEventListener("DOMContentLoaded", function () {
+  const buttons = document.querySelectorAll(".sidebar button");
+  const sections = document.querySelectorAll(".content section");
 
-// activiteiten.style.display =
-//   activiteiten.style.display === "none" ? "block" : "none";
+  buttons.forEach((button) => {
+    button.addEventListener("click", function () {
+      const sectionId = this.textContent.trim().toLowerCase();
+
+      sections.forEach((section) => {
+        if (section.id.toLowerCase() === sectionId) {
+          section.style.display = "block";
+        } else {
+          section.style.display = "none";
+        }
+      });
+    });
+  });
+
+  // Zorg dat standaard alleen de eerste sectie zichtbaar is
+  sections.forEach((section, index) => {
+    section.style.display = index === 0 ? "block" : "none";
+  });
+});
 
 function randomActivity() {
   const activiteiten = [
@@ -122,4 +141,29 @@ function fetchQuote() {
 document.addEventListener("DOMContentLoaded", () => {
   fetchWeather();
   fetchQuote();
+});
+
+document.getElementById("random-video-button").addEventListener("click", () => {
+
+  const videos = [
+    "https://www.youtube.com/embed/1vx8iUvfyCY", // Example video 1
+    "https://www.youtube.com/embed/ZToicYcHIOU", // Example video 2
+    "https://www.youtube.com/embed/inpok4MKVLM", // Example video 3
+  ];
+
+
+  const randomVideo = videos[Math.floor(Math.random() * videos.length)];
+
+
+  const videoContainer = document.getElementById("video-container");
+  videoContainer.innerHTML = `
+    <iframe
+      width="560"
+      height="315"
+      src="${randomVideo}"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  `;
 });
