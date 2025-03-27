@@ -56,6 +56,11 @@
 
 // displayMemeCoins();
 
+// let activiteiten = document.getElementById("activiteiten");
+
+// activiteiten.style.display =
+//   activiteiten.style.display === "none" ? "block" : "none";
+
 function randomActivity() {
   const activiteiten = [
     "🌳 Ga wandelen in het park!",
