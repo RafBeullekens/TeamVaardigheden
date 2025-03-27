@@ -1,13 +1,13 @@
 body {
   font-family: "Aleo", sans-serif;
   text-align: center;
-  background-color: #dbeafe; /* Rustgevend blauw */
+  background-color: #dbeafe;
   margin: 0;
   padding: 0;
 }
 
 header {
-  background-color: #ef4444; /* UCLL rood */
+  background-color: #ef4444;
   color: white;
   padding: 15px;
   text-align: left;
@@ -64,11 +64,6 @@ button:hover {
 p {
   font-size: 18px;
   color: #374151;
-}
-
-img {
-  width: 300px;
-  height: auto;
 }
 
 footer {
