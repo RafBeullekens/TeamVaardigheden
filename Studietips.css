@@ -52,7 +52,7 @@ dd {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  height: 600px;
 }
 
 /* Make images larger and maintain aspect ratio */
@@ -69,26 +69,27 @@ dd {
 }
 
 .tip-text-container {
+  max-height: 600px; /* of een waarde naar keuze */
+  overflow-y: none;
   flex: 1 1 50%;
   display: flex;
   flex-direction: column;
   justify-content: center; /* centers content vertically */
   align-items: center; /* centers content horizontally */
   text-align: center; /* centers text inside the container */
-  font-size: 1.2em;
+  font-size: 1em;
 }
 
 .tip-text h2 {
   margin-top: 0;
   color: var(--UCLLRED);
-  margin-bottom: 2em;
-  font-size: 2em;
+  font-size: 1.5em;
   border-bottom: 1px solid black;
 }
 
 .tip-text p {
   line-height: 1.6;
-  margin-bottom: 0;
+  margin: 0;
 }
 
 article img {
@@ -135,7 +136,7 @@ article:hover img {
 }
 
 /* Responsive adjustments for smaller screens */
-@media (max-width: 1130px) {
+@media (max-width: 1110px) {
   .study-tip {
     flex-direction: column;
   }
