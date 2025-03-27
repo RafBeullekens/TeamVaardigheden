@@ -1,3 +1,4 @@
+//RIP 27/03/25 klant niet tevreden
 // const apiUrl = "https://meme-api.com/gimme";
 // let memeCoins = 10;
 
