@@ -10,6 +10,9 @@ body {
   margin: 0;
   background-color: var(--UCLLBODYCOLOR);
   font-weight: 400;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
@@ -23,8 +26,12 @@ nav {
   font-size: 20px;
   width: 100%;
 }
+main {
+  flex: 1;
+}
 /*Css code voor de footer */
 .footer {
+  margin-top: auto;
   bottom: 0;
   width: 100%;
   background-color: var(--UCLLRED);
