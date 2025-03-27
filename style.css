@@ -26,9 +26,6 @@ body.dark-mode {
     background-color: #380a1c;
   }
 
-  main div {
-    background-color: #b0b0b0;
-  }
   h1 {
     color: #f2f0ef;
   }
@@ -83,7 +80,7 @@ main {
 
 .fa {
   padding-top: 20px;
-  
+
   width: 30px;
   text-align: center;
   text-decoration: none;
