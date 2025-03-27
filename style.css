@@ -198,7 +198,7 @@ dt {
 }
 
 .main-content-container {
-  margin: 1em;
+  margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(1, 1fr);
   grid-template-rows: 1fr;
