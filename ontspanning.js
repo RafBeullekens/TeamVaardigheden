@@ -56,10 +56,29 @@
 
 // displayMemeCoins();
 
-// let activiteiten = document.getElementById("activiteiten");
+document.addEventListener("DOMContentLoaded", function () {
+  const buttons = document.querySelectorAll(".sidebar button");
+  const sections = document.querySelectorAll(".content section");
 
-// activiteiten.style.display =
-//   activiteiten.style.display === "none" ? "block" : "none";
+  buttons.forEach((button) => {
+    button.addEventListener("click", function () {
+      const sectionId = this.textContent.trim().toLowerCase();
+
+      sections.forEach((section) => {
+        if (section.id.toLowerCase() === sectionId) {
+          section.style.display = "block";
+        } else {
+          section.style.display = "none";
+        }
+      });
+    });
+  });
+
+  // Zorg dat standaard alleen de eerste sectie zichtbaar is
+  sections.forEach((section, index) => {
+    section.style.display = index === 0 ? "block" : "none";
+  });
+});
 
 function randomActivity() {
   const activiteiten = [
