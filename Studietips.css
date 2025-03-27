@@ -83,6 +83,42 @@ article:hover img {
   transform: scale(1.2);
 }
 
+/* Footer */
+.footer {
+  bottom: 0;
+  width: 100%;
+  background-color: var(--UCLLRED);
+  color: var(--UCLLWHITE);
+  text-align: center;
+}
+
+.footer-menu {
+  margin: 15px 0;
+}
+.footer-menu a {
+  color: var(--UCLLWHITE);
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 16px;
+}
+.footer-menu a:hover {
+  text-decoration: underline;
+}
+
+.fa {
+  padding-top: 20px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+  text-decoration: none;;
+  border-radius: 50%;
+  color: var(--UCLLWHITE);
+}
+.fa:hover {
+  opacity: 0.7;
+}
+
+
 /* Responsive adjustments for smaller screens */
 @media (max-width: 768px) {
   .study-tip {
