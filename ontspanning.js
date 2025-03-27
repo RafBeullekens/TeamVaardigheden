@@ -142,3 +142,28 @@ document.addEventListener("DOMContentLoaded", () => {
   fetchWeather();
   fetchQuote();
 });
+
+document.getElementById("random-video-button").addEventListener("click", () => {
+
+  const videos = [
+    "https://www.youtube.com/embed/1vx8iUvfyCY", // Example video 1
+    "https://www.youtube.com/embed/ZToicYcHIOU", // Example video 2
+    "https://www.youtube.com/embed/inpok4MKVLM", // Example video 3
+  ];
+
+
+  const randomVideo = videos[Math.floor(Math.random() * videos.length)];
+
+
+  const videoContainer = document.getElementById("video-container");
+  videoContainer.innerHTML = `
+    <iframe
+      width="560"
+      height="315"
+      src="${randomVideo}"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
+  `;
+});
