@@ -1,22 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link
-      rel="icon"
-      href="./images/ucllbrowserFotoTransparent.png"
-      type="image/x-icon"
-    />
-    <link rel="stylesheet" href="style.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
+    <title>Ontspanning - Ga naar buiten!</title>
     <link rel="stylesheet" href="ontspanning.css" />
-    <title>Ontspanning</title>
+
     <script src="ontspanning.js" type="module" defer></script>
   </head>
   <body>
@@ -24,9 +13,9 @@
       <nav>
         <ul>
           <li class="UCLL-Logo">
-            <a href="index.html"
-              ><img src="images/logo.svg" alt="UCLL-Logo"
-            /></a>
+            <a href="index.html">
+              <img src="images/logo.svg" alt="UCLL-Logo" />
+            </a>
           </li>
           <li id="student-buddy-logo">
             <img src="images/studentbuddy.svg" alt="StudentBuddyLogo" />
@@ -41,10 +30,15 @@
     </header>
 
     <main>
-      <p id="meme-coins">Meme Coins: -</p>
-      <button id="meme-button">Generate Meme</button>
+      <p id="weather">Weer: Laden...</p>
+      <button onclick="randomActivity()">Geef me een activiteit!</button>
+      <p id="activity">Klik op de knop voor een idee.</p>
+      <h3>Motivatie van de dag:</h3>
+      <p id="quote">Laden...</p>
     </main>
 
-    <footer>footer</footer>
+    <footer>
+      <p>Student Buddy - Ontspanning</p>
+    </footer>
   </body>
 </html>
