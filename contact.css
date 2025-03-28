@@ -46,3 +46,30 @@
 .contact-form button:hover {
   background: #cd0041;
 }
+
+body.dark-mode {
+  color: #f2f0ef;
+
+  .contact-main {
+    background-color: #3a3b3c;
+  }
+
+  .contact-form {
+    background-color: #636363;
+  }
+
+  nav {
+    background-color: #380a1c;
+  }
+  footer {
+    background-color: #380a1c;
+  }
+
+  h2 {
+    color: #f2f0ef;
+  }
+
+  p {
+    color: #f2f0ef;
+  }
+}

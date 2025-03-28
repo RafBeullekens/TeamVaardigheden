@@ -1,12 +1,12 @@
 body.dark-mode {
-  background-color: #182c4c;
+  background-color: #3a3b3c;
   color: #f2f0ef;
 
   .main-content-container {
-    background-color: #b0b0b0;
+    background-color: #636363;
   }
 
   .main-content-text {
-    background-color: #b0b0b0;
+    background-color: #636363;
   }
 }
