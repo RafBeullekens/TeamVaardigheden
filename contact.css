@@ -72,4 +72,12 @@ body.dark-mode {
   p {
     color: #f2f0ef;
   }
+
+  button {
+    background-color: #380a1c;
+  }
+
+  button:hover {
+    background-color: #380a1c;
+  }
 }

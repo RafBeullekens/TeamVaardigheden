@@ -30,6 +30,10 @@ body.dark-mode {
   #Iets {
     background-color: #636363;
   }
+
+  button {
+    background-color: #380a1c;
+  }
 }
 
 section {
