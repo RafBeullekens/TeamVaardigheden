@@ -74,7 +74,6 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
-  // Zorg dat standaard alleen de eerste sectie zichtbaar is
   sections.forEach((section, index) => {
     section.style.display = index === 0 ? "block" : "none";
   });
@@ -143,20 +142,31 @@ document.addEventListener("DOMContentLoaded", () => {
   fetchQuote();
 });
 
+let lastVideo = null;
 document.getElementById("random-video-button").addEventListener("click", () => {
-
   const videos = [
     "https://www.youtube.com/embed/1vx8iUvfyCY", // Example video 1
     "https://www.youtube.com/embed/ZToicYcHIOU", // Example video 2
     "https://www.youtube.com/embed/inpok4MKVLM", // Example video 3
   ];
+  
+  let randomVideo;
 
+  do{
+  randomVideo = videos[Math.floor(Math.random() * videos.length)];
+  } while(randomVideo === lastVideo);
 
-  const randomVideo = videos[Math.floor(Math.random() * videos.length)];
+  lastVideo = randomVideo;
 
+  const section = document.getElementById("meditatie");
 
-  const videoContainer = document.getElementById("video-container");
-  videoContainer.innerHTML = `
+  const oldIframe = section.querySelector("iframe");
+  if (oldIframe) {
+    oldIframe.remove();
+  }
+  section.insertAdjacentHTML(
+    "beforeend",
+    `
     <iframe
       width="560"
       height="315"
@@ -165,5 +175,6 @@ document.getElementById("random-video-button").addEventListener("click", () => {
       allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen
     ></iframe>
-  `;
+    `
+  );
 });
