@@ -137,13 +137,6 @@ button:hover {
   color: var(--UCLLWHITE);
 }
 
-.main-content-image {
-  transition: transform 0.3s ease;
-}
-.main-content-image:hover {
-  transform: scale(1.05);
-}
-
 ul {
   display: flex;
   flex-direction: row;
@@ -157,6 +150,14 @@ li {
 li a {
   color: var(--UCLLWHITE);
   text-decoration: none;
+}
+
+.quote-banner {
+  margin-top: 1em;
+  font-size: 1.4rem;
+  font-style: italic;
+  color: #f3f4f6;
+  padding: 0 1rem;
 }
 
 li a:hover {
@@ -214,6 +215,7 @@ dt {
   grid-area: 0/0/1/1;
   background-color: var(--UCLLWHITE);
   padding-right: 1em;
+  font-size: 1.5em;
 }
 
 .main-content-image {

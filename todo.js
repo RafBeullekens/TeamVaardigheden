@@ -1,25 +1,75 @@
-const input = document.querySelector('input');
-const ul = document.querySelector('ul');
-const addButton = document.getElementById('add');
+// === To-Do List Logic ===
 
-const addTask = () => {
-    const task = input.value;
-    if (!task) {return;}
-    const li = document.createElement('li');
-    li.textContent = task;
-    const removeButton = document.createElement('button');
-    removeButton.textContent = "Remove";
-    removeButton.classList.add("remove");
-    li.appendChild(removeButton);
-    ul.appendChild(li);
-    input.value = "";
-};
+const todoInput = document.getElementById("todo-input");
+const addTaskBtn = document.getElementById("add-task-btn");
+const todoList = document.getElementById("todo-list");
 
-const removeTask = (event) => {
-    if (event.target.classList.contains("remove")) {
-        event.target.parentElement.remove();
-    }
-};
+// Load from localStorage
+window.addEventListener("DOMContentLoaded", loadTasks);
 
-addButton.addEventListener('click', addTask);
-ul.addEventListener("click", removeTask);
+addTaskBtn.addEventListener("click", addTask);
+todoInput.addEventListener("keypress", (e) => {
+  if (e.key === "Enter") addTask();
+});
+
+function addTask() {
+  const taskText = todoInput.value.trim();
+  if (taskText === "") return;
+
+  const li = document.createElement("li");
+  li.classList.add("todo-item");
+  li.innerHTML = `
+    <span>${taskText}</span>
+    <button class="delete-btn">✖</button>
+  `;
+
+  li.querySelector(".delete-btn").addEventListener("click", () => {
+    li.remove();
+    saveTasks();
+  });
+
+  li.addEventListener("click", () => {
+    li.classList.toggle("completed");
+    saveTasks();
+  });
+
+  todoList.appendChild(li);
+  todoInput.value = "";
+  saveTasks();
+}
+
+function saveTasks() {
+  const tasks = [];
+  document.querySelectorAll(".todo-item").forEach((item) => {
+    tasks.push({
+      text: item.querySelector("span").textContent,
+      completed: item.classList.contains("completed"),
+    });
+  });
+  localStorage.setItem("todoTasks", JSON.stringify(tasks));
+}
+
+function loadTasks() {
+  const tasks = JSON.parse(localStorage.getItem("todoTasks")) || [];
+  tasks.forEach((task) => {
+    const li = document.createElement("li");
+    li.classList.add("todo-item");
+    if (task.completed) li.classList.add("completed");
+    li.innerHTML = `
+      <span>${task.text}</span>
+      <button class="delete-btn">✖</button>
+    `;
+
+    li.querySelector(".delete-btn").addEventListener("click", () => {
+      li.remove();
+      saveTasks();
+    });
+
+    li.addEventListener("click", () => {
+      li.classList.toggle("completed");
+      saveTasks();
+    });
+
+    todoList.appendChild(li);
+  });
+}
