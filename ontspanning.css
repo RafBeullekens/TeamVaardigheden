@@ -61,7 +61,7 @@ body.dark-mode {
   p {
     color: #f2f0ef;
   }
-  #activiteiten {
+  #Activiteiten-generator {
     background-color: #636363;
   }
 
@@ -71,6 +71,16 @@ body.dark-mode {
 
   #Iets {
     background-color: #636363;
+  }
+
+  .sidebar {
+    background-color: #636363;
+    button {
+      background-color: #636363;
+    }
+    button:hover {
+      background-color: #380a1c;
+    }
   }
 
   button {
