@@ -6,6 +6,41 @@ body {
   padding: 0;
 }
 
+.ontspanning-container {
+  display: flex;
+  height: 80vh;
+}
+
+.sidebar {
+  width: 220px;
+  background-color: var(--UCLLBODYCOLOR);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  height: 100%;
+}
+
+.sidebar button {
+  background: none;
+  color: rgb(0, 0, 0);
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+  transition: 0.1s;
+  width: 100%;
+}
+
+.sidebar button:hover {
+  color: var(--UCLLWHITE);
+}
+
+.content {
+  flex-grow: 1;
+  padding: 20px;
+  height: 80vh;
+}
+
 h2 {
   margin-top: 0;
   color: var(--UCLLRED);
@@ -46,7 +81,6 @@ body.dark-mode {
 section {
   display: flex;
   flex-direction: column;
-  margin: 50px auto;
   max-width: 600px;
   background: white;
   align-items: center;
@@ -57,7 +91,6 @@ section {
 
 /* tijdelijk */
 button {
-  margin-top: 5%;
   background-color: black;
 }
 
@@ -75,7 +108,7 @@ button {
 }
 
 button:hover {
-  background-color: #2563eb;
+  background-color: var(--UCLLRED);
 }
 
 p {
