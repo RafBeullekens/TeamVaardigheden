@@ -97,11 +97,11 @@ dd {
 }
 
 article img {
-  transition: 1000ms ease-in-out;
+  transition: 1500ms ease-in-out;
 }
 
 article:hover img {
-  transform: scale(1.1);
+  transform: scale(1.2);
 }
 
 /* Footer */
