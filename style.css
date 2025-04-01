@@ -8,7 +8,7 @@
 /* body margin:0 zorgt er voor dat de standaard margin van de browser gereset wordt*/
 body {
   margin: 0;
-  background-color: var(--UCLLBODYCOLOR);
+  background-color: var(--UCLLWHITE);
   font-weight: 400;
   min-height: 100vh;
   display: flex;

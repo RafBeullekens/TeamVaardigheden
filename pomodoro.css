@@ -14,12 +14,34 @@
   flex-direction: column;
   align-items: center;
   gap: 1rem;
-  padding: 2rem;
-  background-color: var(--UCLLWHITE);
-  margin: 2rem auto;
-  max-width: 600px;
-  border-radius: 15px;
+}
+
+.content-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.timer-container,
+.todo-container {
+  max-width: 500px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 12px;
+  background-color: #fff;
+  height: 50vh;
+}
+
+.timer-container {
+  text-align: center;
+}
+
+.todo-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .visuals {
@@ -66,17 +88,6 @@ button {
   height: 12px;
   border-radius: 6px;
   margin-top: 1rem;
-}
-
-/* === To-Do List Layout === */
-.todo-container {
-  max-width: 700px;
-  margin: 2rem auto;
-  background-color: var(--UCLLWHITE);
-  padding: 2rem;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-  text-align: center;
 }
 
 .todo-container h2 {

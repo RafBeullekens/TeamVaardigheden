@@ -31,28 +31,31 @@
       </nav>
     </header>
 
-    <main>
-      <section class="timer-container">
-        <div class="visuals">
-          <h1 id="session-title">Work Time</h1>
-          <p id="time-display">25:00</p>
-        </div>
-        <div class="controls">
-          <button id="start-pause-btn">Start</button>
-          <button id="reset-btn">Reset</button>
-        </div>
-        <progress id="progress-bar" value="100" max="100"></progress>
-      </section>
+<main>
+  <div class="content-wrapper">
+    <section class="timer-container">
+      <div class="visuals">
+        <h1 id="session-title">Work Time</h1>
+        <p id="time-display">25:00</p>
+      </div>
+      <div class="controls">
+        <button id="start-pause-btn">Start</button>
+        <button id="reset-btn">Reset</button>
+      </div>
+      <progress id="progress-bar" value="100" max="100"></progress>
+    </section>
 
-      <section class="todo-container">
-        <h2>📋 To-Do List</h2>
-        <div class="todo-input">
-          <input type="text" id="todo-input" placeholder="Add a task..." />
-          <button id="add-task-btn">Add</button>
-        </div>
-        <ul id="todo-list"></ul>
-      </section>
-    </main>
+    <section class="todo-container">
+      <h2>📋 To-Do List</h2>
+      <div class="todo-input">
+        <input type="text" id="todo-input" placeholder="Add a task..." />
+        <button id="add-task-btn">Add</button>
+      </div>
+      <ul id="todo-list"></ul>
+    </section>
+  </div>
+</main>
+
 
     <footer class="footer">
       <div class="footer-social">
