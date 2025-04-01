@@ -163,6 +163,9 @@ button {
 /* === Dark Mode Support === */
 body.dark-mode {
   background-color: #3a3b3c;
+  h2 {
+    color: #f2f0ef;
+  }
 }
 body.dark-mode .timer-container,
 body.dark-mode .todo-container {
