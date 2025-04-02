@@ -3,74 +3,98 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./images/ucllbrowserFotoTransparent.png" type="image/x-icon" />
+    <link
+      rel="icon"
+      href="./images/ucllbrowserFotoTransparent.png"
+      type="image/x-icon"
+    />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="pomodoro.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
     <script type="module" src="pomodoro.js" defer></script>
     <script type="module" src="darkmode.js" defer></script>
     <script type="module" src="todo.js" defer></script>
     <title>Pomodoro & To-Do</title>
   </head>
   <body>
-      <script>
+    <script>
       //checkt of darkmode aan of uit staat
       const body = document.querySelector("body");
       if (localStorage.getItem("darkMode") === "enabled") {
-      body.classList.add("dark-mode");
+        body.classList.add("dark-mode");
       } else {
-      body.classList.remove("dark-mode");
+        body.classList.remove("dark-mode");
       }
     </script>
     <header>
       <nav>
         <ul>
-          <li class="UCLL-Logo"><a href="index.html"><img src="images/logo.svg" alt="UCLL-Logo" /></a></li>
-          <li id="student-buddy-logo"><img src="images/studentbuddy.svg" alt="StudentBuddyLogo" /></li>
+          <li class="UCLL-Logo">
+            <a href="index.html"
+              ><img src="images/logo.svg" alt="UCLL-Logo"
+            /></a>
+          </li>
+          <li id="student-buddy-logo">
+            <img src="images/studentbuddy.svg" alt="StudentBuddyLogo" />
+          </li>
           <li><a href="index.html">Home</a></li>
           <li><a href="studietips.html">Studietips</a></li>
           <li><a href="ontspanning.html">Ontspanning</a></li>
           <li><a href="pomodoro.html">Pomodoro/Todo</a></li>
           <li><a href="contact.html">Contact</a></li>
-          <li><button class="dark-mode-button"> &#9790</button></li>
+          <li><button class="dark-mode-button">&#9790;</button></li>
         </ul>
       </nav>
     </header>
 
-<main>
-  <div class="content-wrapper">
-    <section class="timer-container">
-      <div class="visuals">
-        <h1 id="session-title">Work Time</h1>
-        <p id="time-display">25:00</p>
-      </div>
-      <div class="controls">
-        <button id="start-pause-btn">Start</button>
-        <button id="reset-btn">Reset</button>
-      </div>
-      <progress id="progress-bar" value="100" max="100"></progress>
-    </section>
+    <main>
+      <div class="content-wrapper">
+        <section class="timer-container">
+          <div class="visuals">
+            <h1 id="session-title">Work Time</h1>
+            <p id="time-display">25:00</p>
+          </div>
+          <div class="controls">
+            <button id="start-pause-btn">Start</button>
+            <button id="reset-btn">Reset</button>
+          </div>
+          <progress id="progress-bar" value="100" max="100"></progress>
+        </section>
 
-    <section class="todo-container">
-      <h2>📋 To-Do List</h2>
-      <div class="todo-input">
-        <input type="text" id="todo-input" placeholder="Add a task..." />
-        <button id="add-task-btn">Add</button>
+        <section class="todo-container">
+          <h2>📋 To-Do List</h2>
+          <div class="todo-input">
+            <input type="text" id="todo-input" placeholder="Add a task..." />
+            <button id="add-task-btn">Add</button>
+          </div>
+          <ul id="todo-list"></ul>
+        </section>
       </div>
-      <ul id="todo-list"></ul>
-    </section>
-  </div>
-</main>
-
+    </main>
 
     <footer class="footer">
       <div class="footer-social">
-        <a href="https://www.instagram.com/ucleuvenlimburg/" class="fa fa-instagram"></a>
-        <a href="https://www.facebook.com/hogeschoolUCLL/?locale=nl_NL" class="fa fa-facebook"></a>
-        <a href="https://www.linkedin.com/school/hogeschoolucll/posts/?feedView=all" class="fa fa-linkedin"></a>
+        <a
+          href="https://www.instagram.com/ucleuvenlimburg/"
+          class="fa fa-instagram"
+        ></a>
+        <a
+          href="https://www.facebook.com/hogeschoolUCLL/?locale=nl_NL"
+          class="fa fa-facebook"
+        ></a>
+        <a
+          href="https://www.linkedin.com/school/hogeschoolucll/posts/?feedView=all"
+          class="fa fa-linkedin"
+        ></a>
       </div>
       <div class="footer-menu">
         <a href="index.html">Home</a>
@@ -78,9 +102,7 @@
         <a href="ontspanning.html">Ontspanning</a>
         <a href="contact.html">Contact</a>
       </div>
-      <div class="footer-copyright">
-        Copyright &copy;2025; StudentBuddy;
-      </div>
+      <div class="footer-copyright">Copyright &copy;2025; StudentBuddy;</div>
     </footer>
   </body>
 </html>

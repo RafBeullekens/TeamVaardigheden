@@ -61,7 +61,7 @@ body.dark-mode {
   p {
     color: #f2f0ef;
   }
-  #Activiteiten-generator {
+  #activiteiten-generator {
     background-color: #636363;
   }
 
@@ -69,7 +69,7 @@ body.dark-mode {
     background-color: #636363;
   }
 
-  #Iets {
+  #stretch {
     background-color: #636363;
   }
 
@@ -95,12 +95,10 @@ section {
   background: white;
   align-items: center;
   padding: 20px;
-  margin: 6% 25%;
   border-radius: 15px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* tijdelijk */
 button {
   background-color: black;
 }
@@ -131,53 +129,64 @@ iframe {
   border-radius: 15px;
 }
 
+#stretch img {
+  margin-top: 10px;
+  max-width: 300px;
+  border-radius: 10px;
+  justify-self: center;
+}
+
 body.dark-mode {
-body {
-  background-color: #3a3b3c;
-  color: #f2f0ef;
-}
+  body {
+    background-color: #3a3b3c;
+    color: #f2f0ef;
+  }
 
-.sidebar {
-  background-color: #2a2a2a;
-}
+  .sidebar {
+    background-color: #2a2a2a;
+  }
 
-.sidebar button {
-  color: #f2f0ef;
-}
+  .sidebar button {
+    color: #f2f0ef;
+  }
 
-.sidebar button:hover {
-  color: #e30048;
-}
+  .sidebar button:hover {
+    color: #e30048;
+  }
 
-.content {
-  background-color: #1e1e1e;
-}
+  .content {
+    background-color: #1e1e1e;
+  }
 
-h2 {
-  color: #f2f0ef;
-  border-bottom: 1px solid #888;
-}
+  h2 {
+    color: #f2f0ef;
+    border-bottom: 1px solid #888;
+  }
 
-section {
-  background: #2a2a2a;
-  color: #f2f0ef;
-  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
-}
+  section {
+    background: #2a2a2a;
+    color: #f2f0ef;
+    box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.1);
+  }
 
-button {
-  background-color: #380a1c;
-  color: #f2f0ef;
-}
+  button {
+    background-color: #380a1c;
+    color: #f2f0ef;
+  }
 
-button:hover {
-  background-color: #e30048;
-}
+  button:hover {
+    background-color: #e30048;
+  }
 
-.random-button {
-  background-color: #1d4ed8;
-}
+  .random-button {
+    background-color: #1d4ed8;
+  }
 
-p {
-  color: #d1d5db;
-}
+  p {
+    color: #d1d5db;
+  }
+
+  #stretch img {
+    border: 2px solid #f2f0ef;
+  }
 }

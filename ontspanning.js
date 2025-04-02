@@ -56,6 +56,35 @@
 
 // displayMemeCoins();
 
+function randomStretch() {
+  const stretches = [
+    {
+      description: "Neck Roll: Slowly roll your neck in a circle.",
+      image: "images/stretch-neck-roll.jpg",
+    },
+    {
+      description: "Shoulder Shrugs: Lift and lower your shoulders.",
+      image: "images/stretch-shoulder-shrug.jpg",
+    },
+    {
+      description: "Wrist Stretch: Extend one arm, pull back fingers gently.",
+      image: "images/stretch-wrist.jpg",
+    },
+    {
+      description: "Seated Twist: Sit tall and twist your torso to one side.",
+      image: "images/stretch-twist.jpg",
+    },
+  ];
+
+  const stretch = stretches[Math.floor(Math.random() * stretches.length)];
+  document.getElementById("stretch-description").textContent =
+    stretch.description;
+  const stretchImg = document.getElementById("stretch-image");
+  stretchImg.src = stretch.image;
+  stretchImg.alt = stretch.description;
+  stretchImg.style.display = "block";
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   const buttons = document.querySelectorAll(".sidebar button");
   const sections = document.querySelectorAll(".content section");
@@ -149,12 +178,12 @@ document.getElementById("random-video-button").addEventListener("click", () => {
     "https://www.youtube.com/embed/ZToicYcHIOU", // Example video 2
     "https://www.youtube.com/embed/inpok4MKVLM", // Example video 3
   ];
-  
+
   let randomVideo;
 
-  do{
-  randomVideo = videos[Math.floor(Math.random() * videos.length)];
-  } while(randomVideo === lastVideo);
+  do {
+    randomVideo = videos[Math.floor(Math.random() * videos.length)];
+  } while (randomVideo === lastVideo);
 
   lastVideo = randomVideo;
 
