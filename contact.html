@@ -15,6 +15,8 @@
       href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <script src="translations.js" defer></script>
+    <script src="language.js" defer></script>
     <script src="darkmode.js" defer></script>
     <script src="contact.js"></script>
     <title>Contact</title>
@@ -40,33 +42,35 @@
           <li id="student-buddy-logo">
             <img src="images/studentbuddy.svg" alt="StudentBuddyLogo" />
           </li>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="studietips.html">Studietips</a></li>
-          <li><a href="ontspanning.html">Ontspanning</a></li>
-          <li><a href="pomodoro.html">Pomodoro/Todo</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li><a href="studietips.html" data-i18n="nav.studyTips">Studietips</a></li>
+          <li><a href="ontspanning.html" data-i18n="nav.relaxation">Ontspanning</a></li>
+          <li><a href="pomodoro.html" data-i18n="nav.pomodoro">Pomodoro/Todo</a></li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
           <li><button class="dark-mode-button">&#9790;</button></li>
         </ul>
       </nav>
     </header>
     <main class="contact-main">
       <form class="contact-form">
-        <h2>Stuur ons gerust een vraag of suggestie!</h2>
-        <input type="text" name="naam" placeholder="Naam*" required />
+        <h2 data-i18n="contact.title">Stuur ons gerust een vraag of suggestie!</h2>
+        <input type="text" name="naam" data-i18n="contact.name" placeholder="Naam*" required />
         <input
           type="email"
           name="email"
           autocomplete="off"
+          data-i18n="contact.email"
           placeholder="E-mail*"
           required
         />
         <textarea
           name="bericht"
+          data-i18n="contact.message"
           placeholder="Bericht*"
           rows="5"
           required
         ></textarea>
-        <button type="submit" id="submitBtn">Verstuur</button>
+        <button type="submit" id="submitBtn" data-i18n="contact.send">Verstuur</button>
       </form>
       <div id="modal">
         Hello, this is a modal!
@@ -94,10 +98,10 @@
         ></a>
       </div>
       <div class="footer-menu">
-        <a href="index.html">Home</a>
-        <a href="Studietips.html">Studietips</a>
-        <a href="ontspanning.html">Ontspanning</a>
-        <a href="contact.html">Contact</a>
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="Studietips.html" data-i18n="nav.studyTips">Studietips</a>
+        <a href="ontspanning.html" data-i18n="nav.relaxation">Ontspanning</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
       </div>
       <div class="footer-copyright">Copyright &copy;2025; StudentBuddy</div>
     </footer>
