@@ -16,6 +16,7 @@
       rel="stylesheet"
     />
     <script src="darkmode.js" defer></script>
+    <script src="contact.js"></script>
     <title>Contact</title>
   </head>
   <body>
@@ -51,22 +52,31 @@
     <main class="contact-main">
       <form class="contact-form">
         <h2>Stuur ons gerust een vraag of suggestie!</h2>
-        <input type="text" name="naam" placeholder="Uw naam" required />
+        <input type="text" name="naam" placeholder="Naam*" required />
         <input
           type="email"
           name="email"
           autocomplete="off"
-          placeholder="Uw e-mail"
+          placeholder="E-mail*"
           required
         />
         <textarea
           name="bericht"
-          placeholder="Uw bericht"
+          placeholder="Bericht*"
           rows="5"
           required
         ></textarea>
-        <button type="submit">Verstuur</button>
+        <button type="submit" id="submitBtn">Verstuur</button>
       </form>
+      <div id="modal">
+        Hello, this is a modal!
+        <br /><br />
+        <button
+          onclick="document.getElementById('mymodal').style.display='none'"
+        >
+          Close
+        </button>
+      </div>
     </main>
     <footer class="footer">
       <div class="footer-social">
