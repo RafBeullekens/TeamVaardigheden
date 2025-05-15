@@ -68,13 +68,13 @@
     <main>
       <div class="ontspanning-container">
         <div class="sidebar">
-          <button data-i18n="relaxation.activities.title">Activiteiten</button>
-          <button>Meditatie</button>
-          <button>Stretch</button>
+          <button data-section="activiteiten" data-i18n="relaxation.activities.title">Activiteiten</button>
+          <button data-section="meditatie">Meditatie</button>
+          <button data-section="stretch">Stretch</button>
         </div>
         <div class="content">
           <!-- Activiteiten -->
-          <section id="activiteiten-generator">
+          <section id="activiteiten">
             <h2 data-i18n="relaxation.activities.title">Activiteiten</h2>
             <p id="weather" data-i18n="relaxation.activities.weather">Weer: Laden...</p>
             <button class="random-button" onclick="randomActivity()" data-i18n="relaxation.activities.button">
