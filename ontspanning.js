@@ -94,18 +94,21 @@ document.addEventListener("DOMContentLoaded", function () {
       const sectionId = this.dataset.section;
 
       sections.forEach((section) => {
-        if (section.id.toLowerCase() === sectionId) {
-          section.style.display = "block";
-        } else {
-          section.style.display = "none";
-        }
+        section.style.display = section.id.toLowerCase() === sectionId ? "block" : "none";
       });
+
+      buttons.forEach((btn) => btn.classList.remove("active"));
+      this.classList.add("active");
     });
   });
 
   sections.forEach((section, index) => {
     section.style.display = index === 0 ? "block" : "none";
   });
+
+  if (buttons.length > 0) {
+    buttons[0].classList.add("active");
+  }
 });
 
 function randomActivity() {
