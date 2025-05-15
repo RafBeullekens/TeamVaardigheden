@@ -43,9 +43,17 @@
             <img src="images/studentbuddy.svg" alt="StudentBuddyLogo" />
           </li>
           <li><a href="index.html" data-i18n="nav.home">Home</a></li>
-          <li><a href="studietips.html" data-i18n="nav.studyTips">Studietips</a></li>
-          <li><a href="ontspanning.html" data-i18n="nav.relaxation">Ontspanning</a></li>
-          <li><a href="pomodoro.html" data-i18n="nav.pomodoro">Pomodoro/Todo</a></li>
+          <li>
+            <a href="studietips.html" data-i18n="nav.studyTips">Studietips</a>
+          </li>
+          <li>
+            <a href="ontspanning.html" data-i18n="nav.relaxation"
+              >Ontspanning</a
+            >
+          </li>
+          <li>
+            <a href="pomodoro.html" data-i18n="nav.pomodoro">Pomodoro/Todo</a>
+          </li>
           <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
           <li><button class="dark-mode-button">&#9790;</button></li>
         </ul>
@@ -53,8 +61,16 @@
     </header>
     <main class="contact-main">
       <form class="contact-form">
-        <h2 data-i18n="contact.title">Stuur ons gerust een vraag of suggestie!</h2>
-        <input type="text" name="naam" data-i18n="contact.name" placeholder="Naam*" required />
+        <h2 data-i18n="contact.title">
+          Stuur ons gerust een vraag of suggestie!
+        </h2>
+        <input
+          type="text"
+          name="naam"
+          data-i18n="contact.name"
+          placeholder="Naam*"
+          required
+        />
         <input
           type="email"
           name="email"
@@ -70,17 +86,10 @@
           rows="5"
           required
         ></textarea>
-        <button type="submit" id="submitBtn" data-i18n="contact.send">Verstuur</button>
-      </form>
-      <div id="modal">
-        Hello, this is a modal!
-        <br /><br />
-        <button
-          onclick="document.getElementById('mymodal').style.display='none'"
-        >
-          Close
+        <button type="submit" id="submitBtn" data-i18n="contact.send">
+          Verstuur
         </button>
-      </div>
+      </form>
     </main>
     <footer class="footer">
       <div class="footer-social">

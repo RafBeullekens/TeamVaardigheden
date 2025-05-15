@@ -48,16 +48,6 @@
   background: #cd0041;
 }
 
-#modal {
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  background: white;
-  padding: 20px;
-  border: 1px solid black;
-}
-
 body.dark-mode {
   color: #f2f0ef;
 
