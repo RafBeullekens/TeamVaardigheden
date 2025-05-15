@@ -10,6 +10,7 @@
     />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="pomodoro.css" />
+    <link rel="stylesheet" href="login.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,6 +26,7 @@
     <script type="module" src="pomodoro.js" defer></script>
     <script type="module" src="darkmode.js" defer></script>
     <script type="module" src="todo.js" defer></script>
+    <script src="login.js" defer></script>
     <title>Pomodoro & To-Do</title>
   </head>
   <body>
@@ -54,6 +56,11 @@
           <li><a href="pomodoro.html" data-i18n="nav.pomodoro">Pomodoro/Todo</a></li>
           <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
           <li><button class="dark-mode-button">&#9790;</button></li>
+          <li><button id="login-button" class="login-button">Login</button></li>
+      <li id="user-info" style="display: none;">
+        <span id="user-name"></span>
+        <button id="logout-button">Logout</button>
+      </li>
         </ul>
       </nav>
     </header>
@@ -80,6 +87,19 @@
           </div>
           <ul id="todo-list"></ul>
         </section>
+      </div>
+      <div id="login-modal" class="modal">
+        <div class="modal-content">
+          <span class="close-button">&times;</span>
+          <h2>Login</h2>
+          <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required />
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required />
+            <button type="submit">Login</button>
+          </form>
+        </div>
       </div>
     </main>
 

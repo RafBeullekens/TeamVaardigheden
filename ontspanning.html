@@ -20,10 +20,12 @@
     />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="ontspanning.css" />
+    <link rel="stylesheet" href="login.css" />
     <script src="translations.js" defer></script>
     <script src="language.js" defer></script>
     <script src="ontspanning.js" defer></script>
     <script src="darkmode.js" defer></script>
+    <script src="login.js" defer></script>
     <title>Ontspanning - Ga naar buiten!</title>
   </head>
 
@@ -54,6 +56,11 @@
           <li><a href="pomodoro.html" data-i18n="nav.pomodoro">Pomodoro/Todo</a></li>
           <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
           <li><button class="dark-mode-button">&#9790;</button></li>
+          <li><button id="login-button" class="login-button">Login</button></li>
+      <li id="user-info" style="display: none;">
+        <span id="user-name"></span>
+        <button id="logout-button">Logout</button>
+      </li>
         </ul>
       </nav>
     </header>
@@ -104,6 +111,19 @@
               style="max-width: 200px; margin-top: 10px; display: none"
             />
           </section>
+        </div>
+      </div>
+      <div id="login-modal" class="modal">
+        <div class="modal-content">
+          <span class="close-button">&times;</span>
+          <h2>Login</h2>
+          <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required />
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required />
+            <button type="submit">Login</button>
+          </form>
         </div>
       </div>
     </main>
