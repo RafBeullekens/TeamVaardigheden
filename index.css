@@ -9,4 +9,8 @@ body.dark-mode {
   .main-content-text {
     background-color: #636363;
   }
+
+  .main-content-container {
+    background-color: #636363;
+  }
 }

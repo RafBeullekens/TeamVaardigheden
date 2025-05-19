@@ -19,7 +19,8 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="login.css" />
     <link rel="stylesheet" href="darkmode.css" />
     <script src="translations.js" defer></script>
     <script src="language.js" defer></script>
@@ -33,9 +34,9 @@
       //checkt of darkmode aan of uit staat
       const body = document.querySelector("body");
       if (localStorage.getItem("darkMode") === "enabled") {
-      body.classList.add("dark-mode");
+        body.classList.add("dark-mode");
       } else {
-      body.classList.remove("dark-mode");
+        body.classList.remove("dark-mode");
       }
     </script>
     <header>
@@ -50,13 +51,21 @@
             <img src="images/studentbuddy.svg" alt="StudentBuddyLogo" />
           </li>
           <li><a href="index.html" data-i18n="nav.home">Home</a></li>
-          <li><a href="studietips.html" data-i18n="nav.studyTips">Studietips</a></li>
-          <li><a href="ontspanning.html" data-i18n="nav.relaxation">Ontspanning</a></li>
-          <li><a href="pomodoro.html" data-i18n="nav.pomodoro">Pomodoro/Todo</a></li>
+          <li>
+            <a href="studietips.html" data-i18n="nav.studyTips">Studietips</a>
+          </li>
+          <li>
+            <a href="ontspanning.html" data-i18n="nav.relaxation"
+              >Ontspanning</a
+            >
+          </li>
+          <li>
+            <a href="pomodoro.html" data-i18n="nav.pomodoro">Pomodoro/Todo</a>
+          </li>
           <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
           <li><button class="dark-mode-button">&#9790;</button></li>
           <li><button id="login-button" class="login-button">Login</button></li>
-          <li id="user-info" style="display: none;">
+          <li id="user-info" style="display: none">
             <span id="user-name"></span>
             <button id="logout-button">Logout</button>
           </li>
@@ -74,9 +83,19 @@
         <div class="main-content-text">
           <h1 data-i18n="home.welcome">Welkom!</h1>
           <p>
-            <span data-i18n="home.intro">Studeren kan soms overweldigend zijn.</span><br />
-            <span data-i18n="home.description">Deadlines stapelen zich op, taken worden vergeten en pauzes schieten erbij in. StudyBuddy is hier om je te helpen!</span><br />
-            <span data-i18n="home.features">Op deze website vind je handige studietips, een eenvoudige takenlijst om je planning overzichtelijk te houden en ontspanningsoefeningen om gefocust en gemotiveerd te blijven.</span>
+            <span data-i18n="home.intro"
+              >Studeren kan soms overweldigend zijn.</span
+            ><br />
+            <span data-i18n="home.description"
+              >Deadlines stapelen zich op, taken worden vergeten en pauzes
+              schieten erbij in. StudyBuddy is hier om je te helpen!</span
+            ><br />
+            <span data-i18n="home.features"
+              >Op deze website vind je handige studietips, een eenvoudige
+              takenlijst om je planning overzichtelijk te houden en
+              ontspanningsoefeningen om gefocust en gemotiveerd te
+              blijven.</span
+            >
           </p>
         </div>
       </div>
@@ -118,21 +137,21 @@
       <div class="footer-copyright">Copyright &copy;2025; StudentBuddy</div>
     </footer>
     <script>
-  const quotes = [
-    "Believe you can and you're halfway there.",
-    "Start where you are. Use what you have. Do what you can.",
-    "Success is the sum of small efforts repeated daily.",
-    "You don't have to be perfect to be amazing.",
-    "Discipline is choosing between what you want now and what you want most.",
-    "Focus on progress, not perfection.",
-    "Your future is created by what you do today, not tomorrow."
-  ];
+      const quotes = [
+        "Believe you can and you're halfway there.",
+        "Start where you are. Use what you have. Do what you can.",
+        "Success is the sum of small efforts repeated daily.",
+        "You don't have to be perfect to be amazing.",
+        "Discipline is choosing between what you want now and what you want most.",
+        "Focus on progress, not perfection.",
+        "Your future is created by what you do today, not tomorrow.",
+      ];
 
-  const quoteElement = document.getElementById("quote-banner");
-  if (quoteElement) {
-    const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
-    quoteElement.textContent = `"${randomQuote}"`;
-  }
-</script>
+      const quoteElement = document.getElementById("quote-banner");
+      if (quoteElement) {
+        const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+        quoteElement.textContent = `"${randomQuote}"`;
+      }
+    </script>
   </body>
 </html>
