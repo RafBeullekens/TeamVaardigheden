@@ -61,6 +61,10 @@ body.dark-mode {
   p {
     color: #f2f0ef;
   }
+  #activiteiten {
+    background-color: #636363;
+  }
+
   #activiteiten-generator {
     background-color: #636363;
   }
