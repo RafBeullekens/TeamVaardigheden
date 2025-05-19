@@ -24,7 +24,9 @@ function updateDisplay() {
 function toggleTimer() {
   if (isRunning) {
     clearInterval(timer);
-    startPauseBtn.textContent = "Start";
+    startPauseBtn.setAttribute("data-i18n", "pomodoro.start");
+    startPauseBtn.textContent =
+      window.languageManager.getText("pomodoro.start");
   } else {
     timer = setInterval(() => {
       if (timeLeft > 0) {
@@ -34,7 +36,9 @@ function toggleTimer() {
         switchSession();
       }
     }, 1000);
-    startPauseBtn.textContent = "Pause";
+    startPauseBtn.setAttribute("data-i18n", "pomodoro.pause");
+    startPauseBtn.textContent =
+      window.languageManager.getText("pomodoro.pause");
   }
   isRunning = !isRunning;
 }
@@ -42,7 +46,13 @@ function toggleTimer() {
 function switchSession() {
   isWorkSession = !isWorkSession;
   timeLeft = isWorkSession ? workTime : restTime;
-  sessionTitle.textContent = isWorkSession ? "Work Time" : "Rest Time";
+  sessionTitle.setAttribute(
+    "data-i18n",
+    isWorkSession ? "pomodoro.workTime" : "pomodoro.restTime"
+  );
+  sessionTitle.textContent = window.languageManager.getText(
+    isWorkSession ? "pomodoro.workTime" : "pomodoro.restTime"
+  );
   updateDisplay();
 }
 
@@ -51,9 +61,12 @@ function resetTimer() {
   isRunning = false;
   isWorkSession = true;
   timeLeft = workTime;
-  sessionTitle.textContent = "Work Time";
+  sessionTitle.setAttribute("data-i18n", "pomodoro.workTime");
+  sessionTitle.textContent =
+    window.languageManager.getText("pomodoro.workTime");
   updateDisplay();
-  startPauseBtn.textContent = "Start";
+  startPauseBtn.setAttribute("data-i18n", "pomodoro.start");
+  startPauseBtn.textContent = window.languageManager.getText("pomodoro.start");
 }
 
 // Attach event listeners
@@ -63,8 +76,7 @@ resetBtn.addEventListener("click", resetTimer);
 // Initialize display
 updateDisplay();
 
-//Checks wether the timer started or is Paused
-
+//Checks whether the timer started or is Paused
 timeStartPause.addEventListener("click", () => {
   if (firstTimeClickedStart) {
     firstTimeClickedStart = false;
@@ -73,20 +85,24 @@ timeStartPause.addEventListener("click", () => {
     timeStartPause.classList.toggle("Pause");
     if (timeStartPause.classList.contains("Pause")) {
       console.log("pause true");
-      timeStartPause.textContent = "Pause";
+      timeStartPause.setAttribute("data-i18n", "pomodoro.pause");
+      timeStartPause.textContent =
+        window.languageManager.getText("pomodoro.pause");
     } else {
       console.log("pause false");
-      timeStartPause.textContent = "Resume";
+      timeStartPause.setAttribute("data-i18n", "pomodoro.resume");
+      timeStartPause.textContent =
+        window.languageManager.getText("pomodoro.resume");
     }
   }
 });
 
 //resets the counter so the button shows start again when you reset
-
 timeReset.addEventListener("click", () => {
   if (timeStartPause.classList.contains("Pause")) {
     timeStartPause.classList.toggle("Pause");
   }
-  timeStartPause.textContent = "Start";
+  timeStartPause.setAttribute("data-i18n", "pomodoro.start");
+  timeStartPause.textContent = window.languageManager.getText("pomodoro.start");
   firstTimeClickedStart = true;
 });

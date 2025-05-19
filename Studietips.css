@@ -96,6 +96,13 @@ dd {
   margin: 0;
 }
 
+.tip-text p a b,
+.tip-text p a {
+  color: var(--UCLLRED);
+  text-decoration: none;
+  font-weight: bold;
+}
+
 article img {
   transition: 1500ms ease-in-out;
 }

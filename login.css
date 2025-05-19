@@ -1,0 +1,98 @@
+/*login screen*/
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7); /* Darker background for better contrast */
+  }
+  
+  /* Modal content styles */
+  .modal-content {
+    background-color: #fff;
+    color: var(--H1BLUE);
+    margin: 10% auto; 
+    padding: 30px; 
+    border-radius: 15px; 
+    width: 400px; 
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
+    font-family: "Aleo", sans-serif;
+  }
+  
+  
+  /* Close button styles */
+  .close-button {
+    color: var(--UCLLRED);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close-button:hover,
+  .close-button:focus {
+    color: #182c4c;
+    text-decoration: none;
+  }
+  
+  /* Input fields inside the modal */
+  .modal-content input[type="text"],
+  .modal-content input[type="password"] {
+    width: 90%; 
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid var(--UCLLRED);
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  /* Submit button inside the modal */
+  .modal-content button {
+    font-family: "Aleo", sans-serif;
+    color: var(--UCLLWHITE);
+    background-color: var(--UCLLRED);
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  .modal-content button:hover {
+    background-color: #c2003f; 
+    transform: scale(1.05); 
+  }
+  
+  #user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  #user-name {
+    font-weight: bold;
+    color: var(--UCLLWHITE);
+  }
+  
+  #logout-button, #login-button {
+    font-family: "Aleo", sans-serif;
+    color: var(--UCLLWHITE);
+    background-color: #182c4c;
+    border-radius: 5px;
+    border: none;
+    padding: 1em;
+    width: 7em;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  #logout-button:hover, #login-button:hover {
+    background-color:#182c4c;
+    transform: scale(1.05); 
+  }

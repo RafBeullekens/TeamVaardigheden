@@ -6,7 +6,7 @@
 }
 
 .contact-main {
-  background-image: url('images/envelopes.jpg'); /* Replace with your image path */
+  background-image: url("images/envelopes.jpg"); /* Replace with your image path */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,10 +51,8 @@
 body.dark-mode {
   color: #f2f0ef;
 
-  
-
   .contact-main {
-    background-image: url('images/envelopes2.jpg'); /* Replace with your image path */
+    background-image: url("images/envelopes2.jpg"); /* Replace with your image path */
     background-color: #3a3b3c;
   }
 

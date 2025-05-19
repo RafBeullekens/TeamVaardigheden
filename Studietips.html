@@ -10,6 +10,7 @@
     />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="Studietips.css" />
+    <link rel="stylesheet" href="login.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -20,8 +21,10 @@
       href="https://fonts.googleapis.com/css2?family=Aleo:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-
+    <script src="translations.js" defer></script>
+    <script src="language.js" defer></script>
     <script src="darkmode.js" defer></script>
+    <script src="login.js" defer></script>
     <title>Studietips</title>
   </head>
   <body>
@@ -45,12 +48,25 @@
           <li id="student-buddy-logo">
             <img src="images/studentbuddy.svg" alt="StudentBuddyLogo" />
           </li>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="studietips.html">Studietips</a></li>
-          <li><a href="ontspanning.html">Ontspanning</a></li>
-          <li><a href="pomodoro.html">Pomodoro/Todo</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" data-i18n="nav.home">Home</a></li>
+          <li>
+            <a href="studietips.html" data-i18n="nav.studyTips">Studietips</a>
+          </li>
+          <li>
+            <a href="ontspanning.html" data-i18n="nav.relaxation"
+              >Ontspanning</a
+            >
+          </li>
+          <li>
+            <a href="pomodoro.html" data-i18n="nav.pomodoro">Pomodoro/Todo</a>
+          </li>
+          <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
           <li><button class="dark-mode-button">&#9790;</button></li>
+          <li><button id="login-button" class="login-button">Login</button></li>
+          <li id="user-info" style="display: none">
+            <span id="user-name"></span>
+            <button id="logout-button">Logout</button>
+          </li>
         </ul>
       </nav>
     </header>
@@ -64,18 +80,27 @@
             </div>
             <div class="tip-text-container">
               <div class="tip-text">
-                <h2>Test jezelf</h2>
-                <p>
+                <h2 data-i18n="studyTips.tip1.title">Test jezelf</h2>
+                <p data-i18n="studyTips.tip1.content">
                   Vermijd passief lezen van teksten, maar ga op zoek naar
                   actieve manieren om jezelf te testen, bijvoorbeeld laten
-                  ondervragen door iemand. <br /><br />
-                  Door jezelf regelmatig te overhoren of quizjes te maken over
-                  de leerstof, dwing je je brein om actief te herinneren wat je
-                  geleerd hebt. <br /><br />
-                  Dit heet 'retrieval practice' en is veel effectiever dan
-                  herlezen. <br /><br />
-                  Gebruik bijvoorbeeld flashcards of apps zoals Anki om dit toe
-                  te passen.
+                  ondervragen door iemand. Door jezelf regelmatig te overhoren
+                  of quizjes te maken over de leerstof, dwing je je brein om
+                  actief te herinneren wat je geleerd hebt. Dit heet
+                  <a
+                    href="https://www.learningscientists.org/retrieval-practice"
+                    target="_blank"
+                    ><b>retrieval practice</b></a
+                  >
+                  en is veel effectiever dan herlezen. Gebruik bijvoorbeeld
+                  <a href="https://apps.ankiweb.net/" target="_blank"
+                    ><b>flashcards</b></a
+                  >
+                  of apps zoals
+                  <a href="https://apps.ankiweb.net/" target="_blank"
+                    ><b>Anki</b></a
+                  >
+                  om dit toe te passen.
                 </p>
               </div>
             </div>
@@ -84,16 +109,34 @@
           <article class="study-tip">
             <div class="tip-text-container">
               <div class="tip-text">
-                <h2>Herhaling werkt</h2>
-                <p>
+                <h2 data-i18n="studyTips.tip2.title">Herhaling werkt</h2>
+                <p data-i18n="studyTips.tip2.content">
                   Probeer niet alle leerstof op één moment te studeren. Je haalt
                   de beste resultaten door deze momenten te spreiden,
-                  bijvoorbeeld kortere sessies 1 keer per week. <br /><br />
-                  Deze aanpak heet gespreid leren of 'spaced repetition'. Door
-                  regelmatig terug te keren naar leerstof, consolideer je de
-                  informatie beter in je langetermijngeheugen. <br /><br />
-                  Maak bijvoorbeeld een studieschema waarin je leerstof op
-                  verschillende dagen opnieuw bekijkt.
+                  bijvoorbeeld kortere sessies 1 keer per week. Deze aanpak heet
+                  <a
+                    href="https://www.learningscientists.org/spaced-practice"
+                    target="_blank"
+                    ><b>gespreid leren </b></a
+                  >
+                  of
+                  <a
+                    href="https://www.gwern.net/Spaced-repetition"
+                    target="_blank"
+                    ><b>spaced repetition</b></a
+                  >. Door regelmatig terug te keren naar leerstof, consolideer
+                  je de informatie beter in je
+                  <a
+                    href="https://www.simplypsychology.org/long-term-memory.html"
+                    target="_blank"
+                    ><b>langetermijngeheugen</b></a
+                  >. Maak bijvoorbeeld een
+                  <a
+                    href="https://todoist.com/productivity-methods/spaced-repetition"
+                    target="_blank"
+                    ><b>studieschema</b></a
+                  >
+                  waarin je leerstof op verschillende dagen opnieuw bekijkt.
                 </p>
               </div>
             </div>
@@ -101,7 +144,7 @@
               <img src="images/repetition.jpg" alt="Herhaling werkt" />
             </div>
           </article>
-          <!-- Tip 3: Focus op begrijpen, niet memoriseren -->
+          <!-- Tip 3: Focus op begrijpen -->
           <article class="study-tip">
             <div class="tip-image">
               <img
@@ -111,34 +154,81 @@
             </div>
             <div class="tip-text-container">
               <div class="tip-text">
-                <h2>Focus op begrijpen, niet memoriseren</h2>
-                <p>
-                  Zorg ervoor dat je de 'waarom' begrijpt, en niet zomaar kan
-                  opsommen wat er geschreven stond. <br /><br />
-                  Als je de onderliggende logica of samenhang snapt, kun je de
-                  informatie beter toepassen op nieuwe situaties, zoals in
-                  examens of projecten. <br /><br />
-                  Probeer dus leerstof in eigen woorden uit te leggen aan iemand
-                  anders – dat is een goede test van begrip.
+                <h2 data-i18n="studyTips.tip3.title">
+                  Focus op begrijpen, niet memoriseren
+                </h2>
+                <p data-i18n="studyTips.tip3.content">
+                  Zorg ervoor dat je de
+                  <a
+                    href="https://www.learningscientists.org/blog/2016/7/7-1"
+                    target="_blank"
+                    ><b>'waarom'</b></a
+                  >
+                  begrijpt, en niet zomaar kan opsommen wat er geschreven stond.
+                  Als je de onderliggende
+                  <a
+                    href="https://www.learningscientists.org/elaboration"
+                    target="_blank"
+                    ><b>logica</b></a
+                  >
+                  of
+                  <a
+                    href="https://www.mindtools.com/ayg48t3/meaningful-learning"
+                    target="_blank"
+                    ><b>samenhang</b></a
+                  >
+                  snapt, kun je de informatie beter toepassen op nieuwe
+                  situaties, zoals in examens of projecten. Probeer dus leerstof
+                  in
+                  <a
+                    href="https://en.wikipedia.org/wiki/Feynman_technique"
+                    target="_blank"
+                    ><b>eigen woorden</b></a
+                  >
+                  uit te leggen aan iemand anders – dat is een goede test van
+                  begrip.
                 </p>
               </div>
             </div>
           </article>
-          <!-- Tip 4: Gebruik de Pomodoro techniek -->
+          <!-- Tip 4: Pomodoro -->
           <article class="study-tip">
             <div class="tip-text-container">
               <div class="tip-text">
-                <h2>Gebruik de Pomodoro techniek</h2>
-                <p>
-                  Werk in kortere intervallen van 20 tot 50 minuten, en neem dan
-                  een vaste pauze van 5 tot 10 minuten. <br /><br />
+                <h2 data-i18n="studyTips.tip4.title">
+                  Gebruik de Pomodoro techniek
+                </h2>
+                <p data-i18n="studyTips.tip4.content">
+                  Werk in kortere
+                  <a href="https://pomofocus.io/" target="_blank"
+                    ><b>intervallen</b></a
+                  >
+                  van 20 tot 50 minuten, en neem dan een vaste pauze van 5 tot
+                  10 minuten. <br /><br />
                   Hou hier niet te hard aan vast en voorzie langere pauzes op
-                  langere studeersessies. Deze techniek helpt je om gefocust te
-                  blijven en voorkomt mentale uitputting. <br /><br />
-                  Gebruik bijvoorbeeld een timer en combineer het met een
-                  to-dolijst om je voortgang bij te houden. <br /><br />
-                  Na vier Pomodoro-sessies is een langere pauze van 15 tot 30
-                  minuten aangeraden.
+                  langere studeersessies. Deze
+                  <a
+                    href="https://francescocirillo.com/products/the-pomodoro-technique"
+                    target="_blank"
+                    ><b>techniek</b></a
+                  >
+                  helpt je om gefocust te blijven en voorkomt
+                  <a
+                    href="https://www.headspace.com/articles/prevent-mental-fatigue"
+                    target="_blank"
+                    ><b>mentale uitputting</b></a
+                  >. <br /><br />
+                  Gebruik bijvoorbeeld een
+                  <a href="https://pomofocus.io/" target="_blank"
+                    ><b>timer</b></a
+                  >
+                  en combineer het met een
+                  <a href="https://todoist.com/" target="_blank"
+                    ><b>to-dolijst</b></a
+                  >
+                  om je voortgang bij te houden. <br /><br />Na vier
+                  Pomodoro-sessies is een langere pauze van 15 tot 30 minuten
+                  aangeraden.
                 </p>
                 <p>
                   <a href="pomodoro.html"
@@ -155,7 +245,7 @@
               />
             </div>
           </article>
-          <!-- Tip 5: Kies je omgeving zorgvuldig -->
+          <!-- Tip 5: Omgeving -->
           <article class="study-tip">
             <div class="tip-image">
               <img
@@ -165,33 +255,105 @@
             </div>
             <div class="tip-text-container">
               <div class="tip-text">
-                <h2>Kies je omgeving zorgvuldig</h2>
-                <p>
-                  Zoek uit wat voor jou het beste werkt: stilte, muziek, of het
-                  achtergrondgeluid van een koffiebar. <br /><br />
-                  Experimenteer met verschillende omgevingen en ontdek waar jij
-                  het productiefst bent. Soms helpt een aparte plek specifiek
-                  voor studeren om in de juiste mindset te komen.
-                  <br /><br />Vergeet ook niet je gsm of sociale media uit te
-                  schakelen tijdens het studeren.
+                <h2 data-i18n="studyTips.tip5.title">
+                  Kies je omgeving zorgvuldig
+                </h2>
+                <p data-i18n="studyTips.tip5.content">
+                  Zoek uit wat voor jou het beste werkt:
+                  <a href="https://www.noisli.com/" target="_blank"
+                    ><b>stilte</b></a
+                  >,
+                  <a href="https://www.focusatwill.com/" target="_blank"
+                    ><b>muziek</b></a
+                  >, of het achtergrondgeluid van een
+                  <a href="https://coffitivity.com/" target="_blank"
+                    ><b>koffiebar</b></a
+                  >. <br /><br />
+                  Experimenteer met verschillende
+                  <a
+                    href="https://www.sciencedirect.com/science/article/pii/S0272494418305280"
+                    target="_blank"
+                    ><b>omgevingen</b></a
+                  >
+                  en ontdek waar jij het productiefst bent. Soms helpt een
+                  aparte plek specifiek voor studeren om in de juiste
+                  <a
+                    href="https://www.verywellmind.com/what-is-a-mindset-2795025"
+                    target="_blank"
+                    ><b>mindset</b></a
+                  >
+                  te komen. <br /><br />Vergeet ook niet je gsm of
+                  <a href="https://freedom.to/" target="_blank"
+                    ><b>sociale media</b></a
+                  >
+                  uit te schakelen tijdens het studeren.
                 </p>
               </div>
             </div>
           </article>
-          <!-- Tip 6: Slaap, voeding en beweging doen wonderen -->
+          <!-- Tip 6: Gezondheid -->
           <article class="study-tip">
             <div class="tip-text-container">
               <div class="tip-text">
-                <h2>Slaap, voeding en beweging doen wonderen</h2>
-                <p>
-                  Voldoende slapen, gezond eten en regelmatige beweging zijn de
-                  basis voor jouw concentratievermogen. <br /><br />
-                  Plan dus een wandeling in op een drukke dag, en merk zelf het
-                  verschil! Je hersenen functioneren optimaal als je lichaam
-                  goed verzorgd is. <br /><br />Kies voor voedzame maaltijden,
-                  drink genoeg water en vermijd overmatig cafeïnegebruik.
-                  <br /><br />Ook een korte workout of stretchmoment kan je
-                  focus snel verbeteren.
+                <h2 data-i18n="studyTips.tip6.title">
+                  Slaap, voeding en beweging doen wonderen
+                </h2>
+                <p data-i18n="studyTips.tip6.content">
+                  Voldoende
+                  <a
+                    href="https://www.sleepfoundation.org/sleep-hygiene"
+                    target="_blank"
+                    ><b>slapen</b></a
+                  >,
+                  <a
+                    href="https://www.health.harvard.edu/blog/nutritional-psychiatry-your-brain-on-food-201511168626"
+                    target="_blank"
+                    ><b>gezond eten</b></a
+                  >
+                  en regelmatige
+                  <a
+                    href="https://www.cdc.gov/physicalactivity/basics/pa-health/index.htm"
+                    target="_blank"
+                    ><b>beweging</b></a
+                  >
+                  zijn de basis voor jouw
+                  <a
+                    href="https://www.headspace.com/articles/how-to-improve-focus-and-concentration"
+                    target="_blank"
+                    ><b>concentratievermogen</b></a
+                  >. <br /><br />
+                  Plan dus een
+                  <a
+                    href="https://www.health.harvard.edu/blog/regular-exercise-changes-brain-improve-memory-thinking-skills-201404097110"
+                    target="_blank"
+                    ><b>wandeling</b></a
+                  >
+                  in op een drukke dag, en merk zelf het verschil! Je hersenen
+                  functioneren optimaal als je lichaam goed verzorgd is.
+                  <br /><br />Kies voor voedzame maaltijden, drink genoeg
+                  <a
+                    href="https://www.healthline.com/nutrition/7-health-benefits-of-water"
+                    target="_blank"
+                    ><b>water</b></a
+                  >
+                  en vermijd overmatig
+                  <a
+                    href="https://www.healthline.com/nutrition/caffeine-side-effects"
+                    target="_blank"
+                    ><b>cafeïnegebruik</b></a
+                  >. <br /><br />Ook een korte
+                  <a
+                    href="https://www.mayoclinic.org/healthy-lifestyle/fitness/in-depth/exercise/art-20048389"
+                    target="_blank"
+                    ><b>workout</b></a
+                  >
+                  of
+                  <a
+                    href="https://www.healthline.com/health/benefits-of-stretching"
+                    target="_blank"
+                    ><b>stretchmoment</b></a
+                  >
+                  kan je focus snel verbeteren.
                 </p>
               </div>
             </div>
@@ -203,6 +365,19 @@
             </div>
           </article>
         </section>
+      </div>
+      <div id="login-modal" class="modal">
+        <div class="modal-content">
+          <span class="close-button">&times;</span>
+          <h2>Login</h2>
+          <form id="login-form">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required />
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required />
+            <button type="submit">Login</button>
+          </form>
+        </div>
       </div>
     </main>
     <footer class="footer">
@@ -221,10 +396,10 @@
         ></a>
       </div>
       <div class="footer-menu">
-        <a href="index.html">Home</a>
-        <a href="Studietips.html">Studietips</a>
-        <a href="ontspanning.html">Ontspanning</a>
-        <a href="contact.html">Contact</a>
+        <a href="index.html" data-i18n="nav.home">Home</a>
+        <a href="Studietips.html" data-i18n="nav.studyTips">Studietips</a>
+        <a href="ontspanning.html" data-i18n="nav.relaxation">Ontspanning</a>
+        <a href="contact.html" data-i18n="nav.contact">Contact</a>
       </div>
       <div class="footer-copyright">Copyright &copy;2025; StudentBuddy</div>
     </footer>

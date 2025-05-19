@@ -243,3 +243,31 @@ dt {
     margin-right: 2rem;
   }
 }
+
+/* Language selector styling */
+.language-select {
+  background-color: transparent;
+  color: var(--UCLLWHITE);
+  border: 1px solid var(--UCLLWHITE);
+  border-radius: 5px;
+  padding: 5px;
+  font-family: "Aleo", sans-serif;
+  cursor: pointer;
+  outline: none;
+}
+
+.language-select option {
+  background-color: var(--UCLLRED);
+  color: var(--UCLLWHITE);
+}
+
+body.dark-mode .language-select {
+  background-color: #380a1c;
+  color: #f2f0ef;
+  border-color: #f2f0ef;
+}
+
+body.dark-mode .language-select option {
+  background-color: #380a1c;
+}
+
