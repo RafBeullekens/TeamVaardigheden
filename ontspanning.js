@@ -91,7 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   buttons.forEach((button) => {
     button.addEventListener("click", function () {
-      const sectionId = this.textContent.trim().toLowerCase();
+      const sectionId = this.dataset.section;
 
       sections.forEach((section) => {
         if (section.id.toLowerCase() === sectionId) {
