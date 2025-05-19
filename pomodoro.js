@@ -24,8 +24,9 @@ function updateDisplay() {
 function toggleTimer() {
   if (isRunning) {
     clearInterval(timer);
-    startPauseBtn.setAttribute('data-i18n', 'pomodoro.start');
-    startPauseBtn.textContent = window.languageManager.getText('pomodoro.start');
+    startPauseBtn.setAttribute("data-i18n", "pomodoro.start");
+    startPauseBtn.textContent =
+      window.languageManager.getText("pomodoro.start");
   } else {
     timer = setInterval(() => {
       if (timeLeft > 0) {
@@ -35,8 +36,9 @@ function toggleTimer() {
         switchSession();
       }
     }, 1000);
-    startPauseBtn.setAttribute('data-i18n', 'pomodoro.pause');
-    startPauseBtn.textContent = window.languageManager.getText('pomodoro.pause');
+    startPauseBtn.setAttribute("data-i18n", "pomodoro.pause");
+    startPauseBtn.textContent =
+      window.languageManager.getText("pomodoro.pause");
   }
   isRunning = !isRunning;
 }
@@ -44,8 +46,13 @@ function toggleTimer() {
 function switchSession() {
   isWorkSession = !isWorkSession;
   timeLeft = isWorkSession ? workTime : restTime;
-  sessionTitle.setAttribute('data-i18n', isWorkSession ? 'pomodoro.workTime' : 'pomodoro.restTime');
-  sessionTitle.textContent = window.languageManager.getText(isWorkSession ? 'pomodoro.workTime' : 'pomodoro.restTime');
+  sessionTitle.setAttribute(
+    "data-i18n",
+    isWorkSession ? "pomodoro.workTime" : "pomodoro.restTime"
+  );
+  sessionTitle.textContent = window.languageManager.getText(
+    isWorkSession ? "pomodoro.workTime" : "pomodoro.restTime"
+  );
   updateDisplay();
 }
 
@@ -54,11 +61,12 @@ function resetTimer() {
   isRunning = false;
   isWorkSession = true;
   timeLeft = workTime;
-  sessionTitle.setAttribute('data-i18n', 'pomodoro.workTime');
-  sessionTitle.textContent = window.languageManager.getText('pomodoro.workTime');
+  sessionTitle.setAttribute("data-i18n", "pomodoro.workTime");
+  sessionTitle.textContent =
+    window.languageManager.getText("pomodoro.workTime");
   updateDisplay();
-  startPauseBtn.setAttribute('data-i18n', 'pomodoro.start');
-  startPauseBtn.textContent = window.languageManager.getText('pomodoro.start');
+  startPauseBtn.setAttribute("data-i18n", "pomodoro.start");
+  startPauseBtn.textContent = window.languageManager.getText("pomodoro.start");
 }
 
 // Attach event listeners
@@ -77,12 +85,14 @@ timeStartPause.addEventListener("click", () => {
     timeStartPause.classList.toggle("Pause");
     if (timeStartPause.classList.contains("Pause")) {
       console.log("pause true");
-      timeStartPause.setAttribute('data-i18n', 'pomodoro.pause');
-      timeStartPause.textContent = window.languageManager.getText('pomodoro.pause');
+      timeStartPause.setAttribute("data-i18n", "pomodoro.pause");
+      timeStartPause.textContent =
+        window.languageManager.getText("pomodoro.pause");
     } else {
       console.log("pause false");
-      timeStartPause.setAttribute('data-i18n', 'pomodoro.resume');
-      timeStartPause.textContent = window.languageManager.getText('pomodoro.resume');
+      timeStartPause.setAttribute("data-i18n", "pomodoro.resume");
+      timeStartPause.textContent =
+        window.languageManager.getText("pomodoro.resume");
     }
   }
 });
@@ -92,7 +102,7 @@ timeReset.addEventListener("click", () => {
   if (timeStartPause.classList.contains("Pause")) {
     timeStartPause.classList.toggle("Pause");
   }
-  timeStartPause.setAttribute('data-i18n', 'pomodoro.start');
-  timeStartPause.textContent = window.languageManager.getText('pomodoro.start');
+  timeStartPause.setAttribute("data-i18n", "pomodoro.start");
+  timeStartPause.textContent = window.languageManager.getText("pomodoro.start");
   firstTimeClickedStart = true;
 });
