@@ -58,7 +58,7 @@ class LanguageManager {
       if (element.tagName === "INPUT" || element.tagName === "TEXTAREA") {
         element.placeholder = translation;
       } else {
-        element.textContent = translation;
+        element.innerHTML = translation;
       }
     });
   }
