@@ -51,16 +51,24 @@
             <img src="images/studentbuddy.svg" alt="StudentBuddyLogo" />
           </li>
           <li><a href="index.html" data-i18n="nav.home">Home</a></li>
-          <li><a href="studietips.html" data-i18n="nav.studyTips">Studietips</a></li>
-          <li><a href="ontspanning.html" data-i18n="nav.relaxation">Ontspanning</a></li>
-          <li><a href="pomodoro.html" data-i18n="nav.pomodoro">Pomodoro/Todo</a></li>
+          <li>
+            <a href="studietips.html" data-i18n="nav.studyTips">Studietips</a>
+          </li>
+          <li>
+            <a href="pomodoro.html" data-i18n="nav.pomodoro">Pomodoro/Todo</a>
+          </li>
+          <li>
+            <a href="ontspanning.html" data-i18n="nav.relaxation"
+              >Ontspanning</a
+            >
+          </li>
           <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
           <li><button class="dark-mode-button">&#9790;</button></li>
           <li><button id="login-button" class="login-button">Login</button></li>
-      <li id="user-info" style="display: none;">
-        <span id="user-name"></span>
-        <button id="logout-button">Logout</button>
-      </li>
+          <li id="user-info" style="display: none">
+            <span id="user-name"></span>
+            <button id="logout-button">Logout</button>
+          </li>
         </ul>
       </nav>
     </header>
@@ -73,7 +81,9 @@
             <p id="time-display">25:00</p>
           </div>
           <div class="controls">
-            <button id="start-pause-btn" data-i18n="pomodoro.start">Start</button>
+            <button id="start-pause-btn" data-i18n="pomodoro.start">
+              Start
+            </button>
             <button id="reset-btn" data-i18n="pomodoro.reset">Reset</button>
           </div>
           <progress id="progress-bar" value="100" max="100"></progress>
@@ -82,7 +92,12 @@
         <section class="todo-container">
           <h2 data-i18n="pomodoro.todo">📋 To-Do List</h2>
           <div class="todo-input">
-            <input type="text" id="todo-input" data-i18n="pomodoro.addTask" placeholder="Add a task..." />
+            <input
+              type="text"
+              id="todo-input"
+              data-i18n="pomodoro.addTask"
+              placeholder="Add a task..."
+            />
             <button id="add-task-btn" data-i18n="pomodoro.add">Add</button>
           </div>
           <ul id="todo-list"></ul>

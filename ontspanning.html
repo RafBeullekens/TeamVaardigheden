@@ -51,16 +51,24 @@
             <img src="images/studentbuddy.svg" alt="StudentBuddyLogo" />
           </li>
           <li><a href="index.html" data-i18n="nav.home">Home</a></li>
-          <li><a href="studietips.html" data-i18n="nav.studyTips">Studietips</a></li>
-          <li><a href="ontspanning.html" data-i18n="nav.relaxation">Ontspanning</a></li>
-          <li><a href="pomodoro.html" data-i18n="nav.pomodoro">Pomodoro/Todo</a></li>
+          <li>
+            <a href="studietips.html" data-i18n="nav.studyTips">Studietips</a>
+          </li>
+          <li>
+            <a href="pomodoro.html" data-i18n="nav.pomodoro">Pomodoro/Todo</a>
+          </li>
+          <li>
+            <a href="ontspanning.html" data-i18n="nav.relaxation"
+              >Ontspanning</a
+            >
+          </li>
           <li><a href="contact.html" data-i18n="nav.contact">Contact</a></li>
           <li><button class="dark-mode-button">&#9790;</button></li>
           <li><button id="login-button" class="login-button">Login</button></li>
-      <li id="user-info" style="display: none;">
-        <span id="user-name"></span>
-        <button id="logout-button">Logout</button>
-      </li>
+          <li id="user-info" style="display: none">
+            <span id="user-name"></span>
+            <button id="logout-button">Logout</button>
+          </li>
         </ul>
       </nav>
     </header>
@@ -68,7 +76,12 @@
     <main>
       <div class="ontspanning-container">
         <div class="sidebar">
-          <button data-section="activiteiten" data-i18n="relaxation.activities.title">Activiteiten</button>
+          <button
+            data-section="activiteiten"
+            data-i18n="relaxation.activities.title"
+          >
+            Activiteiten
+          </button>
           <button data-section="meditatie">Meditatie</button>
           <button data-section="stretch">Stretch</button>
         </div>
@@ -76,32 +89,59 @@
           <!-- Activiteiten -->
           <section id="activiteiten">
             <h2 data-i18n="relaxation.activities.title">Activiteiten</h2>
-            <p id="weather" data-i18n="relaxation.activities.weather">Weer: Laden...</p>
-            <button class="random-button" onclick="randomActivity()" data-i18n="relaxation.activities.button">
+            <p id="weather" data-i18n="relaxation.activities.weather">
+              Weer: Laden...
+            </p>
+            <button
+              class="random-button"
+              onclick="randomActivity()"
+              data-i18n="relaxation.activities.button"
+            >
               Geef me een activiteit!
             </button>
-            <p id="activity" data-i18n="relaxation.activities.defaultText">Klik op de knop voor een idee.</p>
-            <h3 data-i18n="relaxation.activities.motivationTitle">Motivatie van de dag:</h3>
+            <p id="activity" data-i18n="relaxation.activities.defaultText">
+              Klik op de knop voor een idee.
+            </p>
+            <h3 data-i18n="relaxation.activities.motivationTitle">
+              Motivatie van de dag:
+            </h3>
             <p id="quote">Laden...</p>
           </section>
           <!-- Meditatie -->
           <section id="meditatie">
-            <h2 data-i18n="relaxation.meditation.title">Guided Meditation Videos</h2>
-            <button class="random-button" id="random-video-button" data-i18n="relaxation.meditation.button">
+            <h2 data-i18n="relaxation.meditation.title">
+              Guided Meditation Videos
+            </h2>
+            <button
+              class="random-button"
+              id="random-video-button"
+              data-i18n="relaxation.meditation.button"
+            >
               Geef me een meditatie video!
             </button>
-            <p id="meditatie-description" data-i18n="relaxation.meditation.description">
-              Klik op de knop om een willekeurige begeleide meditatie video te zien.
+            <p
+              id="meditatie-description"
+              data-i18n="relaxation.meditation.description"
+            >
+              Klik op de knop om een willekeurige begeleide meditatie video te
+              zien.
             </p>
             <div id="video-container"></div>
           </section>
           <!-- Stretch -->
           <section id="stretch">
             <h2 data-i18n="relaxation.stretch.title">Stretch Reminder</h2>
-            <button class="random-button" onclick="randomStretch()" data-i18n="relaxation.stretch.button">
+            <button
+              class="random-button"
+              onclick="randomStretch()"
+              data-i18n="relaxation.stretch.button"
+            >
               Geef me een stretch oefening!
             </button>
-            <p id="stretch-description" data-i18n="relaxation.stretch.description">
+            <p
+              id="stretch-description"
+              data-i18n="relaxation.stretch.description"
+            >
               Klik op de knop om een stretch oefening te zien.
             </p>
             <img
